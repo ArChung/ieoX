@@ -3132,6 +3132,9 @@ html, body {
   color: #4e4e4e;
 }
 
+a:focus {
+  outline: none;
+}
 a:hover {
   text-decoration: inherit;
 }
