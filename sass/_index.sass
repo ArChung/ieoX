@@ -1,0 +1,676 @@
+
+
+html,body 
+	width: 100%
+	height: 100%
+	font-size: 80%
+	color: #4e4e4e
+a:hover 
+	text-decoration: inherit
+=fss 
+	font-size: 1.2rem
+
+=fs
+	font-size: 1.6rem 
+	letter-spacing: 0.1rem
+	line-height: 3.5rem
+=fm 
+	font-size: 2.2rem
+	letter-spacing: 0.3rem
+=fb
+	font-size: 3rem
+	letter-spacing: 0.4rem
+h1 
+	+fb
+h2 
+	+fs
+
+=goCenter
+	+transform(translate(-50%,-50%))
+ 
+=graylinearBg 
+	background-color: #858484
+	@include filter-gradient(#858484, #616161, horizontal)
+	@include background-image(linear-gradient(left, #858484 32%,#616161 65%))
+	
+.btn
+	cursor: pointer
+	+border-radius(5px)
+	padding: .4em 2em	
+	display: inline-block
+	+dTime(.3s)
+
+	&:hover 
+		text-decoration: none
+
+	&.grayBtn
+		background-color: $gray
+		color: #fff
+		
+
+	&.bigBtn	
+		padding: .4em 4em
+		+fm
+		letter-spacing: 0.4em	
+
+.borderBtn
+	cursor: pointer
+	+border-radius(5px)
+	padding: .2em 2em	
+	display: inline-block
+	+dTime(.3s)
+	position: relative
+	&:before
+		position: absolute
+		width: 0
+		height: 100%
+		content: ''
+		+dTime(0.3s)
+		left: 0
+		top: 0
+		z-index: -1
+		
+	&.grayBtn
+		border: 1px solid $gray
+		color: black
+		&:before
+			background-color: $gray
+		&:hover 
+			&:before
+				width: 100%
+			color: white
+
+
+	&.bigBtn	
+		padding: .4em 4em
+		font-size: 2em
+		letter-spacing: 0.4em		
+
+.mainContainer
+	width: 100%
+	height: 100%
+	.pageContainer
+		width: 100%
+		position: relative
+		&:nth-child(2n+1)
+			background-color: #eaf2f4
+			@include filter-gradient(#eaf2f4, #ece8ee, vertical)
+			@include background-image(linear-gradient(top, #eaf2f4 0%,#ece8ee 100%))
+		.gridContainer
+			margin: 0 auto
+			max-width: 1400px
+			min-height: 650px
+			padding: 120px 50px
+.header
+	position: relative
+	z-index: 5
+	.logo
+		+bg('logo.png')
+		position: absolute
+		top: 20px
+		left: 20px
+		+scale(.8)
+	.mainMenu
+		position: absolute
+		right: 0
+		top: 50px
+		display: inline-block
+		.menuBtn
+			+fs 
+			padding: 7px 20px
+			margin: 0 5px
+			display: inline-block
+			+dTime(.3s)
+			
+			position: relative
+			&:before
+				position: absolute
+				width: 100%
+				height: 100%
+				content: ''
+				+dTime(0.3s)
+				left: 0
+				top: 0
+				z-index: -1
+				+opacity(0)
+				+scale(0.5)
+				background-color: $gray
+				+border-radius(5px)
+			&:hover 
+				&:before
+					+opacity(1)
+					+scale(1)
+				color: white
+.partclieBg
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	// background-color: blue
+	z-index: 0
+#index 
+	height: 100%
+	+coverBg
+	+bgi('indexbg.jpg')
+	.gridContainer
+		display: flex
+		justify-content: center
+		align-items: center
+		padding-top: 90px
+		height: 100%
+		position: relative
+		z-index: 2
+		.content
+			margin-top: 35px
+			.pageTitle
+				text-align: center
+				h2 
+					margin-top: 30px
+				.bigBtn
+					margin-top: 50px
+					+graylinearBg
+					+dTime(0.2s)
+					&:hover 
+						+opacity(0.9)
+						+scale(1.05)
+		.btnWrap	
+			display: inline-flex
+			justify-content: space-around
+			margin-top: 100px
+			+fs 
+			* + * 
+				margin-left: 15px
+
+
+			
+#misson
+	.gridContainer
+		.content
+			position: relative
+			margin-bottom: 140px
+			.pageTitle
+				width: calc(100% - 700px)
+			.pic
+				+bg('earth.png')
+				// width: 480px
+				// height: 498px
+				+containBg
+				position: absolute
+				right: 0
+				top: 50%
+				+transform(translateY(-50%))
+				
+		.videoWrap
+			display: flex
+			justify-content: space-between
+			.video
+				+aspect-ratio(560,315)
+				width: 45%
+				position: relative
+				iframe 
+					position: absolute
+					top: 0	
+					left: 0
+					width: 100%
+					height: 100%
+
+		
+		
+#feature
+	overflow: hidden
+	.gridContainer
+		.content
+			padding-left: 45%
+			position: relative
+			.pic	
+				position: absolute
+				top: -288px
+				left: -300px
+				+bg('particlePic.png')
+		.featureWrap
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			margin-top: 90px
+			.featureBox
+				width: 260px
+				.icon
+					display: block
+					// width: 116px
+					// height: 142px
+					// +containBg
+					margin: 0 auto
+					margin-bottom: 30px
+				h1 
+					font-size: 1.8rem
+					font-weight: bold
+					text-align: center
+					letter-spacing: inherit
+				h2 
+					font-size: 1.3rem
+					letter-spacing: 0.1rem
+					margin-top: 20px
+					line-height: 2.5rem
+
+
+#planning
+	.gridContainer
+		.content
+			text-align: center
+			.pageTitle
+				+fb 
+				text-align: center
+			.plenWrap
+				// margin: 250px 0
+				// text-align: center
+				display: inline-block
+				// margin: 0 auto
+				position: relative
+				padding: 0px 80px
+				.planBox
+					display: inline-block
+					position: relative
+					vertical-align: text-top
+					margin: 250px 0
+					margin-right: 90px
+					&:last-child
+						margin-right: 0
+						.line 
+							display: none
+						.icon 
+							.i_year
+								font-size: 1.4rem
+								margin-top: 0
+
+					&:nth-child(2n)						
+						.line
+							+transform(rotate(-30deg))
+						.icon 
+							+bg('dot2.png')
+							color: #613e69
+					.icon 
+						
+						+bg('dot1.png')
+						position: relative
+						z-index: 1
+						display: flex
+						text-align: center
+						font-weight: bold
+						justify-content: center
+						align-items: center
+						flex-wrap: wrap
+						color: #294a69
+						line-height: 1.4rem
+						.i_year
+							font-size: 1.2rem
+							margin-top: .2rem
+						
+							
+						.i_math
+							font-size: 1.4rem
+							margin-top: -2.2rem
+					.line	
+						position: absolute
+						top: 50%
+						left: 50%
+						width: 150px
+						height: 1px
+						background-color: $gray
+						z-index: 0
+						+transform(rotate(30deg))
+						+transform-origin(0,0.5px)
+					.txtBox
+						position: absolute
+						width: 250px
+						left: 50%
+						+transform(translateX(-50%))
+						text-align: left
+						ul 
+							padding-left: 20px
+							list-style-type: disc
+							+fss
+
+					&:nth-child(2n+1)
+						top: -40px
+						.txtBox
+							bottom: calc(100% + 15px)
+					&:nth-child(2n)
+						top: 50px
+						.txtBox 
+							top: calc(100% + 15px)
+#team
+	.gridContainer						
+		.content
+			.pageTitle
+				text-align: center
+				+fb
+				margin-bottom: 50px
+			.teamWrap
+				
+				.category
+					+fm 
+					position: relative
+					margin-bottom: 50px
+					
+					&:after 
+						content: ''
+						position: absolute
+						width: 100%
+						height: 2px
+						background-color: #ddd
+						bottom: -3px
+						left: 0
+				.memberWrap
+					display: flex
+					flex-wrap: wrap
+					vertical-align: top
+					justify-content: space-around
+
+					.placeHolder
+						visibility: hidden
+						height: 0
+						border: none
+						margin: 0
+						
+					.memberBox
+						width: 350px
+						margin-bottom: 50px
+						position: relative
+						.m_pic
+							width: 175px
+							height: 203px
+							display: block
+
+						.m_info
+							position: absolute
+							left: 186px
+							top: 150px
+							height: 0
+							width: 0
+							.m_title
+								display: block
+								position: absolute
+								bottom: 45px
+								left: 3px
+								width: 120px
+								+fss
+							.m_nameBox
+								position: absolute
+								bottom: 0
+								left: 0
+								width: 150px
+								.m_name
+									display: inline-block
+									vertical-align: text-top  
+									+fm
+									letter-spacing: normal
+								.icon
+									vertical-align: text-top 
+									margin-top: 10px
+									margin-left: 4px
+								
+						.m_intro
+							margin-top: 15px
+							line-height: inherit
+							ul 
+								list-style-type: disc
+								padding-left: 25px
+								li 
+									+fss
+									line-height: 1.8rem
+#vendor
+	.gridContainer			
+		.pageTitle
+			text-align: center
+			+fb
+			margin-bottom: 50px								
+		.vendorWrap
+			display: flex
+			justify-content: space-around
+			flex-wrap: wrap
+			.vendorBox
+				width: 300px
+				height: 170px
+				// border: 1px solid #000
+				display: inline-flex
+				justify-content: center
+				align-items: center
+				vertical-align: text-top
+				
+					
+				&.placeHolder
+					height: 0
+					visibility: hidden
+
+					
+#contact
+	.gridContainer
+		min-height: 300px
+		.contentWrap
+			.contentBox
+				display: inline-block
+				vertical-align: text-top
+				width: 33%
+				&.contactInfoBox
+					.c_Wrap
+						.c_info
+							display: block
+				.c_title
+					+fm
+					font-weight: bold
+					width: 100%
+					position: relative
+					margin-bottom: 50px
+					padding-left: 15px
+					&:after 
+						content: ''
+						position: absolute
+						bottom: -15px
+						left: 0
+						width: calc(100%  + 5px)
+						height: 2px
+						background-color: $gray
+				.c_Wrap
+					position: relative
+					padding: 0 15px
+					width: 100%
+					&:after
+						content: ''
+						position: absolute
+						height: 100%
+						width: 1px
+						background-color: $gray
+						top: 0
+						left: 2px
+					.c_info
+						+fs
+						display: inline-block
+						vertical-align: text-top
+						padding: 0 5px
+						min-width: 120px
+						.icon	
+							display: inline-block
+							margin-right: 5px
+							vertical-align: text-top
+							margin-top: 2px
+
+
+#chart
+	.gridContainer
+		.chartContainer
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-around
+			width: 100%
+			.chartWrap
+				.chartTitle
+					+fb
+					text-align: center
+					// margin-bottom: 50px
+				.chartBox
+					margin: 80px 0
+					width: 400px
+					height: 400px
+					position: relative
+					.chart
+						width: 100%
+						height: 100%
+					.chatDataWrap
+						position: absolute
+						width: 100%
+						height: 100%
+						top: 0
+						left: 0
+						z-index: 2
+						.chartData
+							position: absolute
+							height: 10px
+							top: 2px
+							left: 2px
+							&.dot_small
+								&:after 
+									width: 12px
+									height: 12px
+							&.dot_mid
+								&:after 
+									width: 20px
+									height: 20px
+							&.dot_big
+								&:after 
+									width: 30px
+									height: 30px
+							&:after 
+								content: ''
+								+border-radius(50%)
+								background-color: $gray
+								position: absolute
+								top: 0
+								left: 0
+								+goCenter
+							.txtBox 
+								position: absolute
+								.dotName
+									width: 150px
+									+fss
+									line-height: normal
+									margin-top: -8px
+								.rate
+									+fm
+									letter-spacing: normal
+									&:after 
+										content: '%'
+										+fs
+							&.c1
+								&:after 
+									background-color: #7e7e7e
+							&.c2
+								&:after 
+									background-color: #a3a3a3
+							&.c3
+								&:after 
+									background-color: #626262
+							&.c4
+								&:after 
+									background-color: #d2d2d2
+							&.c5
+								&:after 
+									background-color: #626262
+							&.c6
+								&:after 
+									background-color: #808080
+							&.c7
+								&:after 
+									background-color: #d2d2d2
+
+.chartBox
+	.chart
+		.ct-slice-donut 
+			stroke-width: 5px!important
+		.ct-series-a .ct-slice-donut
+			stroke: #7e7e7e
+		.ct-series-b .ct-slice-donut
+			stroke: #a3a3a3
+		.ct-series-c .ct-slice-donut
+			stroke: #626262
+		.ct-series-d .ct-slice-donut
+			stroke: #d2d2d2
+		.ct-series-e .ct-slice-donut
+			stroke: #626262
+		.ct-series-f .ct-slice-donut
+			stroke: #808080
+		.ct-series-g .ct-slice-donut
+			stroke: #d2d2d2
+		
+		
+	&.cb1
+		.chatDataWrap
+			.chartData
+				.txtBox
+					text-align: right
+					right: 0
+					top: 0
+			.c1 
+				.txtBox
+					left: 20px
+					top: -20px
+					text-align: left
+					right: auto
+			.c2
+				.txtBox
+					right: 22px
+					top: -10px
+			.c3 
+				.txtBox
+					right: 22px
+					top: -10px
+			.c4 
+				.txtBox
+					right: 22px
+					top: -10px
+			.c5 
+				.txtBox
+					right: 22px
+					top: -30px
+			.c6 
+				.txtBox
+					right: 6px
+					top: -60px
+			.c7 
+				.txtBox
+					top: auto
+					bottom: 30px
+					right: auto
+					left: 0
+					text-align: left
+
+	&.cb2
+		.chatDataWrap
+			.chartData
+				.txtBox
+					text-align: right
+					right: 0
+					top: 0
+			.c1 
+				.txtBox
+					left: 20px
+					top: -20px
+					text-align: left
+					right: auto
+			.c2
+				.txtBox
+					right: auto
+					text-align: left
+					top: 20px
+					left: 0
+
+			.c3 
+				.txtBox
+					right: 22px
+					top: -10px
+			
+			.c4 
+				.txtBox
+					right: 6px
+					top: -60px
+						

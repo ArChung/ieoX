@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>ieoX</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=640,user-scalable=0">
+    <!-- hiding the Browser’s User Interface -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- meta start -->
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="copyright" content="" />
+    <link rel="image_src" href="" />
+    <!-- iOS 6 -->
+    <meta name="apple-mobile-web-app-title" content="">
+    <!-- OG -->
+    <meta property="og:title" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="fb:app_id" content="" />
+    <!-- css start-->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" href="css/default.css">
+    <!-- js start-->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <!-- archung js -->
+    <script type="text/javascript" src="js/ChungTool.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <!-- live reload -->
+    <script>
+        if (!ChungTool.isOnline()) {
+            document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+                ':35729/livereload.js?snipver=1"></' + 'script>')
+        }
+    </script>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="header">
+            <div class="logo"></div>
+            <div class="mainMenu">
+                <a href="#" class="menuBtn">關於我們</a>
+                <a href="#" class="menuBtn">技術簡介</a>
+                <a href="#" class="menuBtn">發展規劃</a>
+                <a href="#" class="menuBtn">團隊介紹</a>
+                <a href="#" class="menuBtn">代幣分配規劃</a>
+                <a href="#" class="menuBtn">常見問題</a>
+                <a href="#" class="menuBtn">聯繫我們</a>
+            </div>
+        </div>
+        <div class="pageContainer" id='index'>
+            <div class="partclieBg" id="indexParticleBg"></div>
+            <div class="gridContainer">
+                <div class="content">
+                    <div class="pageTitle">
+                        <h1>ioeX 白名單登記</h1>
+                        <h2>現在即刻登記，可於6/22-6/24預售階段優先購買ioeX</h2>
+                        <a href="#" class="btn grayBtn bigBtn">立刻登記</a>
+                    </div>
+                    <div class="btnWrap">
+                        <a href="#" class="borderBtn grayBtn">下載白皮書</a>
+                        <a href="#" class="borderBtn grayBtn">下載單頁報告</a>
+                        <a href="#" class="borderBtn grayBtn">下載商業下載商業簡報</a>
+                        <a href="#" class="borderBtn grayBtn">下載技術文件</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pageContainer" id="misson">
+            <div class="gridContainer">
+                <div class="content">
+                    <div class="pageTitle">
+                        <h1>ioeX的使命與願景</h1>
+                        <h2 class='mt_b'>ioeX是藉由架構於分佈式網路、點對點傳輸協議上的互聯網與物聯網通訊功能，展開各種落地商務運營與群眾應用的解決方案。首先要協助企業降低運營成本，並能讓使用者直觀應用來進入多種消費型智能設備使用場景。而後，陸續把既成基礎優化升級，期許能衍伸並深耕更大格局的住宅與生活環境應用、智能汽車通訊應用、智能機器人通訊與管理應用。把科技載體和無線網路通訊的交互行為，藉由點對點直連通訊而更直覺應用和生活化。
+                        </h2>
+                    </div>
+                    <div class="pic"></div>
+                </div>
+                <div class="videoWrap">
+                    <div class="video">
+                        <iframe width="100" height="100" src="https://www.youtube.com/embed/Um63OQz3bjo?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="video">
+                        <iframe width="100" height="100" src="https://www.youtube.com/embed/Um63OQz3bjo?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media"
+                            allowfullscreen></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pageContainer" id='feature'>
+            <div class="gridContainer">
+                <div class="partclieBg" id='featureParticleBg'></div>
+                <div class="content">
+                    <div class="pic"></div>
+                    <div class="pageTitle">
+                        <h1>分佈式直連 ● 去中心化傳輸</h1>
+                        <h2 class='mt_b'>ioeX透過眾多的點對點直連設備形成一套網路組合傳輸與存儲機制，讓晶片廠、設備商、軟體公司或解決方案商已在組網裡的設備與更多後續加進組網的設備，彼此之間的資料檔案傳輸交換與資訊溝通將不再需要透過一個資料存儲與傳輸中心來因應。智能設備可經由加入組網，讓以往所需承擔的資料傳輸與設備軟體在線更新等流量成本與存儲成本及系統維護成本大幅度降低，不因智能設備銷售啟用後的產品生命週期提升企業經營風險；而一般用戶可透過使用具備ioeX組網功能的智能設備或軟件的同時，獲得因分享頻寬與儲存空間而獎勵的ioeX幣。</h2>
+                    </div>
+                </div>
+                <div class="featureWrap">
+                    <div class="featureBox">
+                        <div class="icon feature"></div>
+                        <h1>去中心化，點對點直連</h1>
+                        <h2>不需要一套中心運轉機制，透過自動查找、點對點穿透直連、檔案物件加密傳輸，讓雙向與多向溝通傳輸更即時、有效率、無障礙與安全。</h2>
+                    </div>
+                    <div class="featureBox">
+                        <div class="icon feature"></div>
+                        <h1>代幣獎勵機制</h1>
+                        <h2>與區塊鏈和數位貨幣經濟的整合，讓去中心化組網的節點能因自己提供傳輸功能和存儲功能而獲取獎勵報酬，更願意積極投入從而擴大並健全組網效能。</h2>
+                    </div>
+                    <div class="featureBox">
+                        <div class="icon feature"></div>
+                        <h1>公網節點</h1>
+                        <h2>透過固定IP連網，能透提供運算能力與存儲功能的伺服器節點，是構建和串連組網的主要基礎，亦能提供資料中繼傳輸的服務。</h2>
+                    </div>
+                    <div class="featureBox">
+                        <div class="icon feature"></div>
+                        <h1>設備節點</h1>
+                        <h2>經由浮動IP連網，具備運算能力、快取緩存與存儲功能的智能設備所形成的節點，經由Friend to Friend的機制連結、溝通、交流。</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pageContainer" id='planning'>
+            <div class="gridContainer">
+                <div class="content">
+                    <div class="pageTitle">
+                        ioeX 發展規劃
+                    </div>
+                    <div class="plenWrap">
+                        <div class="planBox">
+                            <div class="line"></div>
+                            <div class="icon timing">
+                                <div class="i_year">2018</div>
+                                <div class="i_math">JUL</div>
+                            </div>
+                            <div class="txtBox">
+                                <ul>
+                                    <li>組網SDK與基本版APP/Service</li>
+                                    <li>一對一、一對多對傳訊息與檔案</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="planBox">
+                            <div class="line"></div>
+                            <div class="icon timing">
+                                <div class="i_year">2018</div>
+                                <div class="i_math">AUG</div>
+                            </div>
+                            <div class="txtBox">
+                                <ul>
+                                    <li>IoT中控設備本機與遠端應用程式的直連管控</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="planBox">
+                            <div class="line"></div>
+                            <div class="icon timing">
+                                <div class="i_year">2018</div>
+                                <div class="i_math">SEP</div>
+                            </div>
+                            <div class="txtBox">
+                                <ul>
+                                    <li>智能音箱設備本機與遠端應用程式的直連控制與使用
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="planBox">
+                            <div class="line"></div>
+                            <div class="icon timing">
+                                <div class="i_year">2018</div>
+                                <div class="i_math">OCT</div>
+                            </div>
+                            <div class="txtBox">
+                                <ul>
+                                    <li>組網功能的Android / iOS / Linux / Windows版本備齊</li>
+                                    <li>「回家上網」，讓家中智能設備為自己建構專屬安全連線</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="planBox">
+                            <div class="line"></div>
+                            <div class="icon timing">
+                                <div class="i_year">2018</div>
+                                <div class="i_math">NOV</div>
+                            </div>
+                            <div class="txtBox">
+                                <ul>
+                                    <li>組網功能整合區塊鏈帳本功能，能夠實現虛擬貨幣獎勵機制</li>
+                                    <li>專屬虛擬貨幣錢包Alpha版</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="planBox">
+                            <div class="line"></div>
+                            <div class="icon timing">
+                                <div class="i_year">2018</div>
+                                <div class="i_math">DEV</div>
+                            </div>
+                            <div class="txtBox">
+                                <ul>
+                                    <li>專屬虛擬貨幣錢包Beta版</li>
+                                    <li>組網線上升級功能Beta版</li>
+                                    <li>設備節點超過20萬個、公網結點分佈於亞歐美澳洲超過500個</li>
+                                    <li>啟動組網的IPFS版本開發工程</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="planBox">
+                            <div class="line"></div>
+                            <div class="icon timing">
+                                <div class="i_year">2018</div>
+                                <div class="i_math">JAN</div>
+                            </div>
+                            <div class="txtBox">
+                                <ul>
+                                    <li>組網線上升級功能正式版</li>
+                                    <li>所有設備節點可被進行獎勵</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="planBox">
+                            <div class="line"></div>
+                            <div class="icon timing">
+                                <div class="i_year">2019</div>
+                            </div>
+                            <div class="txtBox">
+                                <ul>
+                                    <li>將透過自有開發和夥伴合作開發而有各類新功能上線</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pageContainer" id='team'>
+            <div class="partclieBg" id='teamParticleBg'></div>
+
+            <div class="gridContainer">
+                <div class="content">
+                    <div class="pageTitle">
+                        ioeX 團隊介紹
+                    </div>
+                    <div class="teamWrap">
+                        <div class="category">執行團隊</div>
+                        <div class="memberWrap">
+                            <div class="memberBox">
+                                <a href="#" class="m_pic">
+                                    <img src="images/man/team01.png" alt="">
+                                </a>
+                                <div class="m_info">
+                                    <div class="m_title">CEO</div>
+                                    <a href="#" class="m_nameBox">
+                                        <i class="m_name">洪啟源</i>
+                                        <i class="icon linkedin"></i>
+                                    </a>
+                                </div>
+                                <div class="m_intro">
+                                    <ul>
+                                        <li>
+                                            專案管理、商務開發
+                                        </li>
+                                        <li>
+                                            11年鴻海集團之手機ODM專案經理
+                                        </li>
+                                        <li>
+                                            成都軟體子公司Site manager
+                                        </li>
+                                        <li>
+                                            科泰華捷公司(亦來雲前身)總監
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="memberBox">
+                                <a href="#" class="m_pic">
+                                    <img src="images/man/team02.png" alt="">
+                                </a>
+                                <div class="m_info">
+                                    <div class="m_title">VP</div>
+                                    <a href="#" class="m_nameBox">
+                                        <i class="m_name">王俊傑</i>
+                                        <i class="icon linkedin"></i>
+                                    </a>
+                                </div>
+                                <div class="m_intro">
+                                    <ul>
+                                        <li>
+                                            RF功能開發、商務客戶服務
+                                        </li>
+                                        <li>
+                                            於鴻海超過5年資歷
+                                        </li>
+                                        <li>
+                                            手機ODM部門硬體單位主管
+                                        </li>
+                                        <li>
+                                            Android GMS業務部門主管
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="memberBox">
+                                <a href="#" class="m_pic">
+                                    <img src="images/man/team03.png" alt="">
+                                </a>
+                                <div class="m_info">
+                                    <div class="m_title">Business Development</div>
+                                    <a href="#" class="m_nameBox">
+                                        <i class="m_name">彭進保</i>
+                                        <i class="icon linkedin"></i>
+                                    </a>
+                                </div>
+                                <div class="m_intro">
+                                    <ul>
+                                        <li>
+                                            比特幣早期投資人
+                                        </li>
+                                        <li>
+                                            加密貨幣社群意見領袖
+                                        </li>
+                                        <li>
+                                            大中華區策略發展顧問
+                                        </li>
+                                        <li>
+                                            10年品牌經營銷售
+                                        </li>
+                                        <li>
+                                            眾多早期ICO投資人，DAO, Qtum, OMG
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="memberBox">
+                                <a href="#" class="m_pic">
+                                    <img src="images/man/team04.png" alt="">
+                                </a>
+                                <div class="m_info">
+                                    <div class="m_title">Business Development
+                                    </div>
+                                    <a href="#" class="m_nameBox">
+                                        <i class="m_name">郭天銳</i>
+                                        <i class="icon linkedin"></i>
+                                    </a>
+                                </div>
+                                <div class="m_intro">
+                                    <ul>
+                                        <li>
+                                            歐美、台灣市場商務合作結盟
+                                        </li>
+                                        <li>
+                                            投資超過30個區塊鍊項目
+                                        </li>
+                                        <li>
+                                            國際募資機構頂尖業務
+                                        </li>
+                                        <li>
+                                            4年國際工作經驗
+                                        </li>
+                                        <li>
+                                            代幣經濟規劃
+                                        </li>
+                                        <li>
+                                            社群建構者
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="memberBox">
+                                <a href="#" class="m_pic">
+                                    <img src="images/man/team05.png" alt="">
+                                </a>
+                                <div class="m_info">
+                                    <div class="m_title">Chief Marketing Officer
+                                    </div>
+                                    <a href="#" class="m_nameBox">
+                                        <i class="m_name">林筱祐</i>
+                                        <i class="icon linkedin"></i>
+                                    </a>
+                                </div>
+                                <div class="m_intro">
+                                    <ul>
+                                        <li>
+                                            2年國際工作經驗
+                                        </li>
+                                        <li>
+                                            4年國際領導品牌行銷規劃
+                                        </li>
+                                        <li>
+                                            品牌社群操作者
+                                        </li>
+                                        <li>
+                                            線上線下廣告、活動執行
+                                        </li>
+                                        <li>
+                                            公關媒體操作
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="memberBox placeHolder"></div>
+                            <div class="memberBox placeHolder"></div>
+
+                        </div>
+                    </div>
+                    <div class="teamWrap">
+                        <div class="category">技術開發</div>
+                        <div class="memberWrap">
+                            <div class="memberBox">
+                                <a href="#" class="m_pic">
+                                    <img src="images/man/rd01.png" alt="">
+                                </a>
+                                <div class="m_info">
+                                    <div class="m_title">R&D Manager</div>
+                                    <a href="#" class="m_nameBox">
+                                        <i class="m_name">林君豪</i>
+                                        <i class="icon linkedin"></i>
+                                    </a>
+                                </div>
+                                <div class="m_intro">
+                                    <ul>
+                                        <li>
+                                            Android與Linux物聯網系統功能與設備開發
+                                        </li>
+                                        <li>
+                                            於廣達、鴻海任職超過10年
+                                        </li>
+                                        <li>
+                                            應用功能、韌體與底層開發工程資歷
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="memberBox">
+                                <a href="#" class="m_pic">
+                                    <img src="images/man/rd02.png" alt="">
+                                </a>
+                                <div class="m_info">
+                                    <div class="m_title">R&D Manager </div>
+                                    <a href="#" class="m_nameBox">
+                                        <i class="m_name">林韋全</i>
+                                        <i class="icon linkedin"></i>
+                                    </a>
+                                </div>
+                                <div class="m_intro">
+                                    <ul>
+                                        <li>
+                                            熱衷於網路交易商務
+                                        </li>
+                                        <li>
+                                            多年商務系統前後台與資料庫開發經歷
+                                        </li>
+                                        <li>
+                                            曾任職科泰華捷台灣公司互聯網功能部門
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="memberBox">
+                                <a href="#" class="m_pic">
+                                    <img src="images/man/rd03.png" alt="">
+                                </a>
+                                <div class="m_info">
+                                    <div class="m_title">R&D Manager </div>
+                                    <a href="#" class="m_nameBox">
+                                        <i class="m_name">黃鈺凱</i>
+                                        <i class="icon linkedin"></i>
+                                    </a>
+                                </div>
+                                <div class="m_intro">
+                                    <ul>
+                                        <li>
+                                            平面美術、2D動畫、網頁設計、前端開發超過15年職涯
+                                        </li>
+                                        <li>
+                                            曾任職科泰華捷台灣公司互聯網功能部門
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="memberBox">
+                                <a href="#" class="m_pic">
+                                    <img src="images/man/rd04.png" alt="">
+                                </a>
+                                <div class="m_info">
+                                    <div class="m_title">R&D Manager </div>
+                                    <a href="#" class="m_nameBox">
+                                        <i class="m_name">徐偉原</i>
+                                        <i class="icon linkedin"></i>
+                                    </a>
+                                </div>
+                                <div class="m_intro">
+                                    <ul>
+                                        <li>
+                                            熟悉網路架構及協定、Linux、Windows與Android
+                                        </li>
+                                        <li>
+                                            多年於宏碁和鴻海開發數位電視系統、數位相框與手機應用功能
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="memberBox">
+                                <a href="#" class="m_pic">
+                                    <img src="images/man/rd05.png" alt="">
+                                </a>
+                                <div class="m_info">
+                                    <div class="m_title">R&D Manager </div>
+                                    <a href="#" class="m_nameBox">
+                                        <i class="m_name">莊凱傑</i>
+                                        <i class="icon linkedin"></i>
+                                    </a>
+                                </div>
+                                <div class="m_intro">
+                                    <ul>
+                                        <li>
+                                            擅長iOS與Android APP和PHP後台開發
+                                        </li>
+                                        <li>
+                                            多年於鴻海智能手機應用功能開發經歷
+                                        </li>
+                                        <li>
+                                            曾任職科泰華捷台灣公司軟體部門
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="memberBox">
+                                <a href="#" class="m_pic">
+                                    <img src="images/man/rd06.png" alt="">
+                                </a>
+                                <div class="m_info">
+                                    <div class="m_title">R&D Manager </div>
+                                    <a href="#" class="m_nameBox">
+                                        <i class="m_name">謝鴻駿</i>
+                                        <i class="icon linkedin"></i>
+                                    </a>
+                                </div>
+                                <div class="m_intro">
+                                    <ul>
+                                        <li>
+                                            韌體與系統軟體開發
+                                        </li>
+                                        <li>
+                                            於台聯、鴻海等公司超過十年之網路通訊、移動裝置、視訊串流、電商系統前後台功能等經歷
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="memberBox">
+                                <a href="#" class="m_pic">
+                                    <img src="images/man/rd07.png" alt="">
+                                </a>
+                                <div class="m_info">
+                                    <div class="m_title">R&D Manager </div>
+                                    <a href="#" class="m_nameBox">
+                                        <i class="m_name">辜宗輝</i>
+                                        <i class="icon linkedin"></i>
+                                    </a>
+                                </div>
+                                <div class="m_intro">
+                                    <ul>
+                                        <li>
+                                            韌體與系統軟體開發、PHP後台開發，熟悉Linux、C++
+                                        </li>
+                                        <li>
+                                            超過15年開發經驗
+                                        </li>
+                                        <li>
+                                            曾任職於DBTEL、廣達、鴻海等手機開發部門
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="memberBox">
+                                <a href="#" class="m_pic">
+                                    <img src="images/man/rd08.png" alt="">
+                                </a>
+                                <div class="m_info">
+                                    <div class="m_title">R&D Manager </div>
+                                    <a href="#" class="m_nameBox">
+                                        <i class="m_name">陳怡呈</i>
+                                        <i class="icon linkedin"></i>
+                                    </a>
+                                </div>
+                                <div class="m_intro">
+                                    <ul>
+                                        <li>
+                                            橫跨軟硬體開發
+                                        </li>
+                                        <li>
+                                            多年行動裝置、數位開發板軟硬體開發經驗
+                                        </li>
+                                        <li>
+                                            具備網路商務系統全端能力
+                                        </li>
+                                        <li>
+                                            曾任職台聯、鴻海等公司
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="memberBox">
+                                <a href="#" class="m_pic">
+                                    <img src="images/man/rd09.png" alt="">
+                                </a>
+                                <div class="m_info">
+                                    <div class="m_title">R&D Manager </div>
+                                    <a href="#" class="m_nameBox">
+                                        <i class="m_name">黃麟期</i>
+                                        <i class="icon linkedin"></i>
+                                    </a>
+                                </div>
+                                <div class="m_intro">
+                                    <ul>
+                                        <li>
+                                            喜愛雲端系統和區塊鏈功能的後端工程師
+                                        </li>
+                                        <li>
+                                            多年Linux系統與開源軟體開發經歷
+                                        </li>
+                                        <li>
+                                            曾任職科泰華捷台灣公司互聯網功能部門
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                            <div class="memberBox placeHolder"></div>
+                            <div class="memberBox placeHolder"></div>
+
+                        </div>
+                    </div>
+                    <div class="teamWrap">
+                        <div class="category">顧問</div>
+                        <div class="memberWrap">
+                            <div class="memberBox">
+                                <a href="#" class="m_pic">
+                                    <img src="images/man/ad01.png" alt="">
+                                </a>
+                                <div class="m_info">
+                                    <div class="m_title">軟銀投資</div>
+                                    <a href="#" class="m_nameBox">
+                                        <i class="m_name">司徒榮勛</i>
+                                        <i class="icon linkedin"></i>
+                                    </a>
+                                </div>
+                                <div class="m_intro">
+                                    <ul>
+                                        <li>資料待補</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="memberBox">
+                                <a href="#" class="m_pic">
+                                    <img src="images/man/ad02.png" alt="">
+                                </a>
+                                <div class="m_info">
+                                    <div class="m_title">Everex Ltd.</div>
+                                    <a href="#" class="m_nameBox">
+                                        <i class="m_name">李謙佑</i>
+                                        <i class="icon linkedin"></i>
+                                    </a>
+                                </div>
+                                <div class="m_intro">
+                                    <ul>
+                                        <li>
+                                            多倫多大學法律學士
+                                        </li>
+                                        <li>
+                                            現任香港煌城電子有限公司總經理 熟悉消費電子產業供應鏈與解決方案供應商
+                                        </li>
+                                        <li>
+                                            豐富的歐美銷售經驗
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="memberBox">
+                                <a href="#" class="m_pic">
+                                    <img src="images/man/ad03.png" alt="">
+                                </a>
+                                <div class="m_info">
+                                    <div class="m_title">亦來雲資本</div>
+                                    <a href="#" class="m_nameBox">
+                                        <i class="m_name">胡定核</i>
+                                        <i class="icon linkedin"></i>
+                                    </a>
+                                </div>
+                                <div class="m_intro">
+                                    <ul>
+                                        <li>
+                                            北京清華大學五道口金融學院經濟學博士
+                                        </li>
+                                        <li>
+                                            現任亦來雲資本董事長
+                                        </li>
+                                        <li>
+                                            為中國知名之經濟學與投資專家
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="memberBox">
+                                <a href="#" class="m_pic">
+                                    <img src="images/man/ad04.png" alt="">
+                                </a>
+                                <div class="m_info">
+                                    <div class="m_title">亦來雲基金會</div>
+                                    <a href="#" class="m_nameBox">
+                                        <i class="m_name">陳榕</i>
+                                        <i class="icon linkedin"></i>
+                                    </a>
+                                </div>
+                                <div class="m_intro">
+                                    <ul>
+                                        <li>
+                                            美國伊利諾大學香檳分校碩士
+                                        </li>
+                                        <li>
+                                            亦來云(Elastos)創辦人
+                                        </li>
+                                        <li>
+                                            中國知名互聯網專家與操作系統科學家
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="memberBox placeHolder"></div>
+                            <div class="memberBox placeHolder"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pageContainer" id='vendor'>
+            <div class="gridContainer">
+                <div class="pageTitle">
+                    ioeX 合作廠商
+                </div>
+                <div class="vendorWrap">
+                    <div class="vendorBox">
+                        <img src="images/vendor/v01.png" alt="">
+                    </div>
+                    <div class="vendorBox">
+                        <img src="images/vendor/v02.png" alt="">
+                    </div>
+                    <div class="vendorBox">
+                        <img src="images/vendor/v03.png" alt="">
+                    </div>
+                    <div class="vendorBox">
+                        <img src="images/vendor/v04.png" alt="">
+                    </div>
+                    <div class="vendorBox">
+                        <img src="images/vendor/v05.png" alt="">
+                    </div>
+                    <div class="vendorBox">
+                        <img src="images/vendor/v06.png" alt="">
+                    </div>
+                    <div class="vendorBox">
+                        <img src="images/vendor/v07.png" alt="">
+                    </div>
+                    <div class="vendorBox">
+                        <img src="images/vendor/v08.png" alt="">
+                    </div>
+                    <div class="vendorBox">
+                        <img src="images/vendor/v09.png" alt="">
+                    </div>
+                    <div class="vendorBox">
+                        <img src="images/vendor/v11.png" alt="">
+                    </div>
+                    <div class="vendorBox">
+                        <img src="images/vendor/v10.png" alt="">
+                    </div>
+                    <div class="placeHolder vendorBox"></div>
+                    <div class="placeHolder vendorBox"></div>
+                    <div class="placeHolder vendorBox"></div>
+                </div>
+            </div>
+        </div>
+        <div class="pageContainer" id='chart'>
+            <div class="partclieBg" id="chartParticleBg"></div>
+            
+            <div class="gridContainer">
+                <div class="chartContainer">
+                    <div class="chartWrap">.
+                        <div class="chartTitle">代幣分配規劃</div>
+                        <div class="chartBox cb1">
+                            <div class="chart" id='chart01'>
+                            </div>
+                            <div class="chatDataWrap">
+                                <div class="chartData c1">
+                                    <div class="txtBox">
+                                        <div class="rate">55</div>
+                                        <div class="dotName">對外販售</div>
+                                    </div>
+                                </div>
+                                <div class="chartData c2">
+                                    <div class="txtBox">
+                                        <div class="rate">10</div>
+                                        <div class="dotName">天使融資</div>
+                                    </div>
+                                </div>
+                                <div class="chartData c3">
+                                    <div class="txtBox">
+                                        <div class="rate">15</div>
+                                        <div class="dotName">基金會</div>
+                                    </div>
+                                </div>
+                                <div class="chartData c4">
+                                    <div class="txtBox">
+                                        <div class="rate">3</div>
+                                        <div class="dotName">顧問</div>
+                                    </div>
+                                </div>
+                                <div class="chartData c5">
+                                    <div class="txtBox">
+                                        <div class="rate">10</div>
+                                        <div class="dotName">團隊成員</div>
+                                    </div>
+                                </div>
+                                <div class="chartData c6">
+                                    <div class="txtBox">
+                                        <div class="rate">2</div>
+                                        <div class="dotName">推廣獎勵</div>
+                                    </div>
+                                </div>
+                                <div class="chartData c7">
+                                    <div class="txtBox">
+                                        <div class="rate">5</div>
+                                        <div class="dotName">集給策略合作夥伴</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chartWrap">.
+                        <div class="chartTitle">ICO後資金運用</div>
+                        <div class="chartBox cb2">
+                            <div class="chart" id='chart02'>
+                            </div>
+                            <div class="chatDataWrap">
+                                <div class="chartData c1">
+                                    <div class="txtBox">
+                                        <div class="rate">40</div>
+                                        <div class="dotName">組網未來技術發展</div>
+                                    </div>
+                                </div>
+                                <div class="chartData c2">
+                                    <div class="txtBox">
+                                        <div class="rate">15</div>
+                                        <div class="dotName">相關廠商相關廠商策略投資聯盟</div>
+                                    </div>
+                                </div>
+                                <div class="chartData c3">
+                                    <div class="txtBox">
+                                        <div class="rate">30</div>
+                                        <div class="dotName">市場營銷</div>
+                                    </div>
+                                </div>
+                                <div class="chartData c4">
+                                    <div class="txtBox">
+                                        <div class="rate">15</div>
+                                        <div class="dotName">預備金</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pageContainer" id='contact'>
+            <div class="gridContainer">
+                <div class="contentWrap">
+                    <div class="contentBox contactInfoBox">
+                        <div class="c_title ">聯繫我們</div>
+                        <div class="c_Wrap">
+                            <div class="c_info">
+                                <div class="icon phone"></div>
+                                +886 2 77071028
+                            </div>
+                            <div class="c_info">
+                                <div class="icon mail"></div>
+                                info@ieoX.io
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contentBox">
+                        <div class="c_title">ieoX</div>
+                        <div class="c_Wrap">
+                            <div class="c_info">
+                                關於我們
+                            </div>
+                            <div class="c_info">
+                                技術簡介
+                            </div>
+                            <div class="c_info">發展規劃</div>
+                            <div class="c_info">團隊介紹</div>
+                            <div class="c_info">代幣分配規劃</div>
+                            <div class="c_info">常見問題</div>
+                        </div>
+                    </div>
+                    <div class="contentBox">
+                        <div class="c_title">社群媒體</div>
+                        <div class="c_Wrap">
+                            <div class="c_info">Telagram</div>
+                            <div class="c_info">Twitter</div>
+                            <div class="c_info">Medium</div>
+                            <div class="c_info">Reddit</div>
+                            <div class="c_info">Facebook</div>
+                            <div class="c_info">Linkedin</div>
+                            <div class="c_info">Youtube</div>
+                            <div class="c_info">Bitcoin</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="pageContainer hide">
+            <div class="gridContainer">
+
+            </div>
+        </div> -->
+    </div>
+</body>
+
+</html>
