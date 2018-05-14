@@ -3,46 +3,44 @@ $(document).ready(function () {
   // initLoading();
   initChart();
   initParticleBg();
+  initMenu();
 
 })
 
-function initLoading() {
-  $('.loadingFirst').waitForImages({
-    finished: function () {
-      // $('#loading').find('.loadingTxt').html('100');
-      // simpleHide($('.loadingPage'), 0);
-      // _gaPV('index');
-      // $('.mainContainer').removeClass('hide');
-      // $('.ci').removeClass('hide');
-      // playAni(getChannelString());
-    },
-    each: function (loaded, count, success) {
-      var r = Math.floor(loaded / count * 100);
-      // console.log(loaded,count)
-      // $('.loadingPage').find('.txt').html(r + '%');
 
-    },
-    waitForAll: true
-  });
+function initMenu() {
+  var menu = $('.mainMenu');
+  $('.phoneMenuBtn').click(function () {
+    menu.addClass('show');
+  })
+
+  menu.click(function () {
+    menu.removeClass('show');
+  })
+
+  menu.find('.pageBtn').click(function (e) {
+    // menu.removeClass('show');
+    var href = $(this).attr('href');
+
+    if (href.indexOf('#') === 0) {
+      e.preventDefault();
+      var target = $(href).offset().top;
+      ChungTool.pageScrollAni(target)
+    }
+  })
 }
 
 
+
 function initParticleBg() {
-  particlesJS.load('indexParticleBg', 'js/indexParticleBg-config.json', function () {
-    console.log('callback - particles.js config loaded');
-  });
+  particlesJS.load('indexParticleBg', 'js/indexParticleBg-config.json', function () {});
 
-  particlesJS.load('featureParticleBg', 'js/featureParticleBg-config.json', function () {
-    console.log('callback - particles.js config loaded');
-  });
 
-  particlesJS.load('teamParticleBg', 'js/indexParticleBg-config.json', function () {
-    console.log('callback - particles.js config loaded');
-  });
+  particlesJS.load('featureParticleBg', 'js/featureParticleBg-config.json', function () {});
 
-  particlesJS.load('chartParticleBg', 'js/featureParticleBg-config.json', function () {
-    console.log('callback - particles.js config loaded');
-  });
+  particlesJS.load('teamParticleBg', 'js/indexParticleBg-config.json', function () {});
+
+  particlesJS.load('chartParticleBg', 'js/featureParticleBg-config.json', function () {});
 }
 
 
@@ -114,7 +112,7 @@ function initChart() {
 
   //     // We can't use guided mode as the animations need to rely on setting begin manually
   //     // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
-      
+
 
   //     setTimeout(function () {  
   //       console.log('start');
@@ -130,7 +128,7 @@ function initChart() {
   // }
 
   // For the sake of the example we update the chart every time it's created with a delay of 8 seconds
- 
+
 
 
 
