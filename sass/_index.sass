@@ -6,6 +6,8 @@ html,body
 	font-size: 80%
 	color: #4e4e4e
 	
+*
+	box-sizing: border-box
 
 a
 	&:focus
@@ -61,9 +63,12 @@ h2
 
 .borderBtn
 	cursor: pointer
-	+border-radius(5px)
-	padding: .2em 2em	
+	+border-radius(22.5px)
+	height: 45px
+	line-height: 45px
+	padding: 0 50px
 	display: inline-block
+	overflow: hidden
 	+dTime(.3s)
 	position: relative
 	&:before
@@ -178,12 +183,12 @@ h2
 				+opacity(0)
 				+scale(0.5)
 				background-color: $gray
-				+border-radius(5px)
+				+border-radius(25px)
 			&:hover 
 				&:before
-					+opacity(1)
+					+opacity(.2)
 					+scale(1)
-				color: white
+				// color: white
 .partclieBg
 	position: absolute
 	top: 0
@@ -247,28 +252,34 @@ h2
 		.content
 			position: relative
 			margin-bottom: 140px
-			.pageTitle
-				width: calc(100% - 700px)
-				
-			.pic
-				+bg('earth.png')
-				// width: 480px
-				// height: 498px
-				+containBg
-				position: absolute
-				right: 0
-				top: 50%
-				+transform(translateY(-50%))
-				
-			+pad
-				margin-bottom: 0
-				.pageTitle
-					width: 100%
+			
+			.picWrap
+				+aspect-ratio(1000,527)	
+				position: relative
+				margin: 0 auto 30px
+				max-width: 1000px
 				.pic
-					position: relative
+					+bgi('earth.png')
+					width: 100%
+					height: 100%
+					+containBg
+					position: absolute
 					top: 0
-					margin: 50px auto
-					+transform(translateY(0%))
+					left: 0
+					
+
+			.pageTitle
+				width: 100%  
+				
+			// +pad
+			// 	margin-bottom: 0
+			// 	.pageTitle
+			// 		width: 100%
+			// 	.pic
+			// 		position: relative
+			// 		top: 0
+			// 		margin: 50px auto
+			// 		+transform(translateY(0%))
 					
 				
 		.videoWrap
@@ -588,7 +599,7 @@ h2
 			justify-content: space-around
 			flex-wrap: wrap
 			.vendorBox
-				width: 300px
+				width: 270px
 				height: 170px
 				// border: 1px solid #000
 				display: inline-flex

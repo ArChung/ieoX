@@ -3132,6 +3132,10 @@ html, body {
   color: #4e4e4e;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 a:focus {
   outline: none;
 }
@@ -3166,7 +3170,7 @@ h2 {
   text-decoration: none;
 }
 .btn.grayBtn {
-  background-color: #616161;
+  background-color: #8a8c90;
   color: #fff;
 }
 .btn.bigBtn {
@@ -3178,11 +3182,14 @@ h2 {
 
 .borderBtn {
   cursor: pointer;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  padding: 0.2em 2em;
+  -moz-border-radius: 22.5px;
+  -webkit-border-radius: 22.5px;
+  border-radius: 22.5px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 50px;
   display: inline-block;
+  overflow: hidden;
   -moz-transition: all, 0.3s;
   -o-transition: all, 0.3s;
   -webkit-transition: all, 0.3s;
@@ -3203,11 +3210,11 @@ h2 {
   z-index: -1;
 }
 .borderBtn.grayBtn {
-  border: 1px solid #616161;
+  border: 1px solid #8a8c90;
   color: black;
 }
 .borderBtn.grayBtn:before {
-  background-color: #616161;
+  background-color: #8a8c90;
 }
 .borderBtn.grayBtn:hover {
   color: white;
@@ -3361,17 +3368,14 @@ h2 {
   -ms-transform: scale(0.5, 0.5);
   -webkit-transform: scale(0.5, 0.5);
   transform: scale(0.5, 0.5);
-  background-color: #616161;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-}
-.header .mainMenu .menuBtn:hover {
-  color: white;
+  background-color: #8a8c90;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
 }
 .header .mainMenu .menuBtn:hover:before {
-  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-  opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+  opacity: 0.2;
   -moz-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
   -webkit-transform: scale(1, 1);
@@ -3478,13 +3482,29 @@ h2 {
   position: relative;
   margin-bottom: 140px;
 }
-#misson .gridContainer .content .pageTitle {
-  width: calc(100% - 700px);
+#misson .gridContainer .content .picWrap {
+  position: relative;
+  position: relative;
+  margin: 0 auto 30px;
+  max-width: 1000px;
 }
-#misson .gridContainer .content .pic {
-  width: 639px;
-  height: 337px;
+#misson .gridContainer .content .picWrap:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 52.7%;
+}
+#misson .gridContainer .content .picWrap > .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#misson .gridContainer .content .picWrap .pic {
   background-image: url("../images/earth.png");
+  width: 100%;
+  height: 100%;
   -moz-background-size: contain;
   -o-background-size: contain;
   -webkit-background-size: contain;
@@ -3492,29 +3512,11 @@ h2 {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   position: absolute;
-  right: 0;
-  top: 50%;
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  top: 0;
+  left: 0;
 }
-@media screen and (max-width: 1400px) {
-  #misson .gridContainer .content {
-    margin-bottom: 0;
-  }
-  #misson .gridContainer .content .pageTitle {
-    width: 100%;
-  }
-  #misson .gridContainer .content .pic {
-    position: relative;
-    top: 0;
-    margin: 50px auto;
-    -moz-transform: translateY(0%);
-    -ms-transform: translateY(0%);
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
-  }
+#misson .gridContainer .content .pageTitle {
+  width: 100%;
 }
 #misson .gridContainer .videoWrap {
   display: flex;
@@ -3688,7 +3690,7 @@ h2 {
   left: 50%;
   width: 150px;
   height: 1px;
-  background-color: #616161;
+  background-color: #8a8c90;
   z-index: 0;
   -moz-transform: rotate(30deg);
   -ms-transform: rotate(30deg);
@@ -3908,7 +3910,7 @@ h2 {
   flex-wrap: wrap;
 }
 #vendor .gridContainer .vendorWrap .vendorBox {
-  width: 300px;
+  width: 270px;
   height: 170px;
   display: inline-flex;
   justify-content: center;
@@ -3966,7 +3968,7 @@ h2 {
   left: 0;
   width: calc(100%  + 5px);
   height: 2px;
-  background-color: #616161;
+  background-color: #8a8c90;
 }
 #contact .gridContainer .contentWrap .contentBox .c_Wrap {
   position: relative;
@@ -3978,7 +3980,7 @@ h2 {
   position: absolute;
   height: 100%;
   width: 1px;
-  background-color: #616161;
+  background-color: #8a8c90;
   top: 0;
   left: 2px;
 }
@@ -4053,7 +4055,7 @@ h2 {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  background-color: #616161;
+  background-color: #8a8c90;
   position: absolute;
   top: 0;
   left: 0;
