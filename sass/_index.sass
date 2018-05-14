@@ -5,6 +5,8 @@ html,body
 	height: 100%
 	font-size: 80%
 	color: #4e4e4e
+	
+
 a
 	&:focus
 		outline: none
@@ -106,19 +108,56 @@ h2
 			min-height: 650px
 			padding: 120px 50px
 .header
-	position: relative
+	position: fixed
 	z-index: 5
+	width: 100%
+	height: 90px
+	background-color: rgba(white,0.7)
+	.phoneMenuBtn
+		+pad2
+			+bg('menuBtn.png')
+			position: absolute
+			top: 15px
+			right: 15px
+
 	.logo
 		+bg('logo.png')
 		position: absolute
-		top: 20px
+		top: 15px
 		left: 20px
-		+scale(.8)
 	.mainMenu
 		position: absolute
 		right: 0
-		top: 50px
+		top: 15px
 		display: inline-block
+		+pad2
+			position: fixed
+			width: 100%
+			top: 0
+			display: block
+			height: 100%
+			background-color: #eaf2f4
+			@include filter-gradient(#eaf2f4, #ece8ee, vertical)
+			@include background-image(linear-gradient(top, #eaf2f4 0%,#ece8ee 100%))
+			+divGoVerticalCenter_forMom
+			display: none
+			&.show
+				display: block
+			.clozBtn
+				+bg('cloz.png')
+				position: absolute
+				top: 30px
+				right: 30px
+			.btnWrap
+				position: relative
+				+divGoVerticalCenter_forKid
+				.menuBtn
+					display: block
+					text-align: center
+					+fb
+					&:not(:last-child)
+						margin-bottom: 20px
+				
 		.menuBtn
 			+fs 
 			padding: 7px 20px
@@ -157,15 +196,17 @@ h2
 	height: 100%
 	+coverBg
 	+bgi('indexbg.jpg')
+	+phone 
+		height: auto
+
 	.gridContainer
-		display: flex
-		justify-content: center
-		align-items: center
-		padding-top: 90px
-		height: 100%
+		padding-top: 150px
+		height: 100% 
 		position: relative
 		z-index: 2
+		+divGoVerticalCenter_forMom
 		.content
+			+divGoVerticalCenter_forKid
 			margin-top: 35px
 			.pageTitle
 				text-align: center
@@ -179,12 +220,25 @@ h2
 						+opacity(0.9)
 						+scale(1.05)
 		.btnWrap	
-			display: inline-flex
-			justify-content: space-around
+			// display: inline-flex
+			// justify-content: space-around
 			margin-top: 100px
+			text-align: center
+			// flex-wrap: wrap
 			+fs 
-			* + * 
-				margin-left: 15px
+			.borderBtn
+				display: inline-block
+				box-sizing: border-box
+				margin-bottom: 20px
+				&:not(:last-child)
+					margin-right: 15px
+				+phone 
+					width: 100%
+					&:not(:last-child)
+						margin-right: 0
+			
+
+			
 
 
 			
@@ -195,6 +249,7 @@ h2
 			margin-bottom: 140px
 			.pageTitle
 				width: calc(100% - 700px)
+				
 			.pic
 				+bg('earth.png')
 				// width: 480px
@@ -205,13 +260,29 @@ h2
 				top: 50%
 				+transform(translateY(-50%))
 				
+			+pad
+				margin-bottom: 0
+				.pageTitle
+					width: 100%
+				.pic
+					position: relative
+					top: 0
+					margin: 50px auto
+					+transform(translateY(0%))
+					
+				
 		.videoWrap
 			display: flex
 			justify-content: space-between
+			flex-wrap: wrap
 			.video
 				+aspect-ratio(560,315)
 				width: 45%
 				position: relative
+				+phone 
+					width: 100%
+					&:not(:last-child)
+						margin-bottom: 50px
 				iframe 
 					position: absolute
 					top: 0	
@@ -227,18 +298,30 @@ h2
 		.content
 			padding-left: 45%
 			position: relative
+			z-index: 2
 			.pic	
 				position: absolute
 				top: -288px
 				left: -300px
 				+bg('particlePic.png')
+			+pad2 
+				padding-left: 0
+				.pic 
+					+opacity(0.5)
+					
 		.featureWrap
 			display: flex
 			flex-wrap: wrap
 			justify-content: space-between
 			margin-top: 90px
+			position: relative
+			z-index: 2
+			+pad2
+				max-width: 600px
+				margin: 50px auto 0
 			.featureBox
 				width: 260px
+				margin-bottom: 15px
 				.icon
 					display: block
 					// width: 116px
@@ -272,12 +355,14 @@ h2
 				// margin: 0 auto
 				position: relative
 				padding: 0px 80px
+				
 				.planBox
 					display: inline-block
 					position: relative
 					vertical-align: text-top
-					margin: 250px 0
+					margin: 220px 0
 					margin-right: 90px
+
 					&:last-child
 						margin-right: 0
 						.line 
@@ -311,9 +396,10 @@ h2
 							margin-top: .2rem
 						
 							
-						.i_math
+						.i_month
 							font-size: 1.4rem
 							margin-top: -2.2rem
+							min-width: 50px
 					.line	
 						position: absolute
 						top: 50%
@@ -339,10 +425,50 @@ h2
 						top: -40px
 						.txtBox
 							bottom: calc(100% + 15px)
+							
 					&:nth-child(2n)
 						top: 50px
 						.txtBox 
 							top: calc(100% + 15px)
+							
+
+				+pad 
+					max-width: 800px
+					.planBox
+						&:nth-child(4n)
+							.line 
+								display: none
+				+phone
+					margin-top: 50px
+					.planBox
+						margin: 0
+						width: 100%	
+						margin-bottom: 40px
+						&:last-child
+							margin-bottom: 0
+						&:nth-child(2n+1)
+							top: 0
+							left: -20px
+
+						&:nth-child(2n)
+							top: 0
+							left: 20px
+						.line 
+							display: none
+						.icon 
+							position: absolute
+							top: 0
+							left: 0
+
+						.txtBox
+							position: relative
+							top: 0
+							left: 0
+							width: 100%
+							+transform(translateX(0%))
+							padding-left: 70px
+							min-height: 68px
+							
 #team
 	.gridContainer						
 		.content
@@ -442,7 +568,8 @@ h2
 				align-items: center
 				vertical-align: text-top
 				
-					
+				+phone 
+					width: 240px
 				&.placeHolder
 					height: 0
 					visibility: hidden
@@ -450,12 +577,20 @@ h2
 					
 #contact
 	.gridContainer
-		min-height: 300px
+		min-height: auto
+		padding: 50px 0
 		.contentWrap
+			+phone 
+				padding: 0 50px
 			.contentBox
 				display: inline-block
 				vertical-align: text-top
 				width: 33%
+				
+				+phone
+					width: 100%
+					&:not(:last-child)
+						margin-bottom: 50px
 				&.contactInfoBox
 					.c_Wrap
 						.c_info
@@ -491,8 +626,10 @@ h2
 						+fs
 						display: inline-block
 						vertical-align: text-top
-						padding: 0 5px
+						padding: 0px 5px
 						min-width: 120px
+						&:hover 
+							text-decoration: underline
 						.icon	
 							display: inline-block
 							margin-right: 5px
