@@ -3103,10 +3103,30 @@ a:hover {
   display: inline-block;
   vertical-align: text-top;
 }
-.icon.feature {
-  width: 104px;
-  height: 120px;
-  background-image: url("../images/icon1.png");
+.icon.feature1 {
+  width: 120px;
+  height: 140px;
+  background-image: url("../images/icon/dot1.png");
+}
+.icon.feature2 {
+  width: 120px;
+  height: 140px;
+  background-image: url("../images/icon/dot2.png");
+}
+.icon.feature3 {
+  width: 120px;
+  height: 140px;
+  background-image: url("../images/icon/dot3.png");
+}
+.icon.feature4 {
+  width: 120px;
+  height: 140px;
+  background-image: url("../images/icon/dot4.png");
+}
+.icon.feature5 {
+  width: 120px;
+  height: 140px;
+  background-image: url("../images/icon/dot5.png");
 }
 .icon.linkedin {
   width: 26px;
@@ -3480,7 +3500,7 @@ h2 {
 
 #misson .gridContainer .content {
   position: relative;
-  margin-bottom: 140px;
+  margin-bottom: 80px;
 }
 #misson .gridContainer .content .picWrap {
   position: relative;
@@ -3520,12 +3540,12 @@ h2 {
 }
 #misson .gridContainer .videoWrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 #misson .gridContainer .videoWrap .video {
   position: relative;
-  width: 45%;
+  width: 80%;
   position: relative;
 }
 #misson .gridContainer .videoWrap .video:before {
@@ -3585,25 +3605,18 @@ h2 {
 #feature .gridContainer .featureWrap {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 90px;
   position: relative;
   z-index: 2;
 }
-@media screen and (max-width: 1199px) {
-  #feature .gridContainer .featureWrap {
-    max-width: 600px;
-    margin: 50px auto 0;
-  }
-}
 #feature .gridContainer .featureWrap .featureBox {
-  width: 260px;
+  width: 19%;
   margin-bottom: 15px;
 }
 #feature .gridContainer .featureWrap .featureBox .icon {
   display: block;
   margin: 0 auto;
-  margin-bottom: 30px;
 }
 #feature .gridContainer .featureWrap .featureBox h1 {
   font-size: 1.8rem;
@@ -3614,8 +3627,18 @@ h2 {
 #feature .gridContainer .featureWrap .featureBox h2 {
   font-size: 1.3rem;
   letter-spacing: 0.1rem;
-  margin-top: 20px;
+  margin-top: 10px;
+  text-align: center;
   line-height: 2.5rem;
+}
+@media screen and (max-width: 1199px) {
+  #feature .gridContainer .featureWrap {
+    max-width: 600px;
+    margin: 50px auto 0;
+  }
+  #feature .gridContainer .featureWrap .featureBox {
+    width: 40%;
+  }
 }
 
 #planning .gridContainer .content {

@@ -253,7 +253,7 @@ h2
 	.gridContainer
 		.content
 			position: relative
-			margin-bottom: 140px
+			margin-bottom: 80px
 			
 			.picWrap
 				+aspect-ratio(1000,527)	
@@ -286,11 +286,13 @@ h2
 				
 		.videoWrap
 			display: flex
-			justify-content: space-between
+			justify-content: space-around
 			flex-wrap: wrap
+			// margin: 0 auto
 			.video
 				+aspect-ratio(560,315)
-				width: 45%
+				// width: 45%
+				width: 80%
 				position: relative
 				+phone 
 					width: 100%
@@ -325,15 +327,13 @@ h2
 		.featureWrap
 			display: flex
 			flex-wrap: wrap
-			justify-content: space-between
+			justify-content: space-around
 			margin-top: 90px
 			position: relative
 			z-index: 2
-			+pad2
-				max-width: 600px
-				margin: 50px auto 0
+			
 			.featureBox
-				width: 260px
+				width: 19%
 				margin-bottom: 15px
 				.icon
 					display: block
@@ -341,7 +341,7 @@ h2
 					// height: 142px
 					// +containBg
 					margin: 0 auto
-					margin-bottom: 30px
+					// margin-bottom: 30px
 				h1 
 					font-size: 1.8rem
 					font-weight: bold
@@ -350,9 +350,15 @@ h2
 				h2 
 					font-size: 1.3rem
 					letter-spacing: 0.1rem
-					margin-top: 20px
+					margin-top: 10px
+					text-align: center
 					line-height: 2.5rem
 
+			+pad2
+				max-width: 600px
+				margin: 50px auto 0
+				.featureBox
+					width: 40%
 
 #planning
 	.gridContainer
