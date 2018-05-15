@@ -17,11 +17,13 @@ a
 
 =fss 
 	font-size: 1.2rem
-
+	+phone 
+		font-size: 1.6rem
 =fs
 	font-size: 1.6rem 
 	letter-spacing: 0.1rem 
 	line-height: 3.5rem
+	
 =fm 
 	font-size: 2.2rem
 	letter-spacing: 0.3rem
@@ -550,25 +552,27 @@ h2
 									-ms-transform: rotate(-60deg)
 									-o-transform: rotate(-60deg)
 									transform: rotate(-60deg)
+									+coverBg
 
 						.m_info
 							position: absolute
 							left: 186px
-							top: 150px
+							top: 93px
 							height: 0
 							width: 0
 							.m_title
 								display: block
 								position: absolute
-								bottom: 45px
+								bottom: 0
 								left: 3px
 								width: 120px
 								+fss
 							.m_nameBox
 								position: absolute
-								bottom: 0
+								top: 0
 								left: 0
 								width: 150px
+								line-height: 2.5rem
 								.m_name
 									display: inline-block
 									vertical-align: text-top  
@@ -576,7 +580,7 @@ h2
 									letter-spacing: normal
 								.icon
 									vertical-align: text-top 
-									margin-top: 10px
+									margin-top: 3px
 									margin-left: 4px
 								
 						.m_intro
@@ -587,7 +591,7 @@ h2
 								padding-left: 25px
 								li 
 									+fss
-									line-height: 1.8rem
+									// line-height: 1.8rem
 #vendor
 	.gridContainer			
 		.pageTitle
@@ -601,7 +605,7 @@ h2
 			.vendorBox
 				width: 270px
 				height: 170px
-				// border: 1px solid #000
+				padding: 15px
 				display: inline-flex
 				justify-content: center
 				align-items: center

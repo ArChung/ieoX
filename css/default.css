@@ -3716,6 +3716,11 @@ h2 {
   list-style-type: disc;
   font-size: 1.2rem;
 }
+@media screen and (max-width: 768px) {
+  #planning .gridContainer .content .plenWrap .planBox .txtBox ul {
+    font-size: 1.6rem;
+  }
+}
 #planning .gridContainer .content .plenWrap .planBox:nth-child(2n+1) {
   top: -40px;
 }
@@ -3851,27 +3856,38 @@ h2 {
   -ms-transform: rotate(-60deg);
   -o-transform: rotate(-60deg);
   transform: rotate(-60deg);
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 #team .gridContainer .content .teamWrap .memberWrap .memberBox .m_info {
   position: absolute;
   left: 186px;
-  top: 150px;
+  top: 93px;
   height: 0;
   width: 0;
 }
 #team .gridContainer .content .teamWrap .memberWrap .memberBox .m_info .m_title {
   display: block;
   position: absolute;
-  bottom: 45px;
+  bottom: 0;
   left: 3px;
   width: 120px;
   font-size: 1.2rem;
 }
+@media screen and (max-width: 768px) {
+  #team .gridContainer .content .teamWrap .memberWrap .memberBox .m_info .m_title {
+    font-size: 1.6rem;
+  }
+}
 #team .gridContainer .content .teamWrap .memberWrap .memberBox .m_info .m_nameBox {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 150px;
+  line-height: 2.5rem;
 }
 #team .gridContainer .content .teamWrap .memberWrap .memberBox .m_info .m_nameBox .m_name {
   display: inline-block;
@@ -3882,7 +3898,7 @@ h2 {
 }
 #team .gridContainer .content .teamWrap .memberWrap .memberBox .m_info .m_nameBox .icon {
   vertical-align: text-top;
-  margin-top: 10px;
+  margin-top: 3px;
   margin-left: 4px;
 }
 #team .gridContainer .content .teamWrap .memberWrap .memberBox .m_intro {
@@ -3895,7 +3911,11 @@ h2 {
 }
 #team .gridContainer .content .teamWrap .memberWrap .memberBox .m_intro ul li {
   font-size: 1.2rem;
-  line-height: 1.8rem;
+}
+@media screen and (max-width: 768px) {
+  #team .gridContainer .content .teamWrap .memberWrap .memberBox .m_intro ul li {
+    font-size: 1.6rem;
+  }
 }
 
 #vendor .gridContainer .pageTitle {
@@ -3912,6 +3932,7 @@ h2 {
 #vendor .gridContainer .vendorWrap .vendorBox {
   width: 270px;
   height: 170px;
+  padding: 15px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -4072,6 +4093,11 @@ h2 {
   font-size: 1.2rem;
   line-height: normal;
   margin-top: -8px;
+}
+@media screen and (max-width: 768px) {
+  #chart .gridContainer .chartContainer .chartWrap .chartBox .chatDataWrap .chartData .txtBox .dotName {
+    font-size: 1.6rem;
+  }
 }
 #chart .gridContainer .chartContainer .chartWrap .chartBox .chatDataWrap .chartData .txtBox .rate {
   font-size: 2.2rem;
