@@ -33,14 +33,40 @@ function initMenu() {
 
 
 function initParticleBg() {
-  particlesJS.load('indexParticleBg', 'js/indexParticleBg-config.json', function () {});
+  var aniConfigArr = ['js/animation-bubble-config.json','js/animation-particle-config.json', 'js/animation-bubble-config-2.json','js/animation-particle-config.json']
+  var selectorArr = ['indexParticleBg', 'featureParticleBg', 'teamParticleBg', 'chartParticleBg']
+  var selector = '.partclieBg';
+  var psnArr = [];
+  var count = 0;
 
 
-  particlesJS.load('featureParticleBg', 'js/featureParticleBg-config.json', function () {});
 
-  particlesJS.load('teamParticleBg', 'js/indexParticleBg-config.json', function () {});
+  inView(selector)
+    .on('enter', function (e) {
+      var t = $(e);
+      var index = $(selector).index(t);
+      if (!psnArr[index]) {
+        particlesJS.load(selectorArr[index], aniConfigArr[index]);
+        psnArr[index] = count ; 
+        count++;
+      } else {
+        pJSDom[psnArr[index]].pJS.fn.vendors.start();
+      }
+    })
+    .on('exit', function (e) {
+      var t = $(e);
+      var index = $(selector).index(t);
+      clearAnimation(psnArr[index])
+      
+    });
 
-  particlesJS.load('chartParticleBg', 'js/featureParticleBg-config.json', function () {});
+
+    function clearAnimation(index){
+      cancelRequestAnimFrame(pJSDom[index].pJS.fn.checkAnimFrame);
+      cancelRequestAnimFrame(pJSDom[index].pJS.fn.drawAnimFrame);
+      pJSDom[index].pJS.fn.particlesEmpty();
+      pJSDom[index].pJS.fn.canvasClear();
+    }
 }
 
 
@@ -52,14 +78,14 @@ function initChart() {
   var chart = new Chartist.Pie('#chart01', {
     series: data1,
   }, {
-    donut: true,
-  });
+      donut: true,
+    });
 
   var chart2 = new Chartist.Pie('#chart02', {
     series: data2,
   }, {
-    donut: true,
-  });
+      donut: true,
+    });
 
   chart.on('created', function () {
     getPosition($('#chart01'));
