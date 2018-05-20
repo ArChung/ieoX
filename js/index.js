@@ -1,11 +1,40 @@
+var doPageAnimation = false;
+
 $(document).ready(function () {
 
   // initLoading();
   initChart();
-  initParticleBg();
+  
   initMenu();
 
+  initFlipClock();
+
+  if(doPageAnimation){
+    initParticleBg();
+  }
+
+  
 })
+
+function initFlipClock(){
+  var clock = $('#flipClock');
+  if(clock){
+    var futureDate = clock.attr('data-countTo').split('/');
+    var futureTime = new Date(+futureDate[0],+futureDate[1]-1,+futureDate[2],0,0,0,0);
+    // var currentDate = clock.attr('data-currentTime');
+    var currentDate = new Date(+clock.attr('data-currentTime'))
+    console.log('currentDate: ', currentDate.toLocaleString());
+    console.log('futureTime: ', futureTime.toLocaleString());
+    
+    var diff = futureTime.getTime() / 1000 - currentDate.getTime() /1000;
+
+    // Instantiate a coutdown FlipClock
+    clock.FlipClock(diff, {
+      clockFace: 'DailyCounter',
+      countdown: true
+    });
+  }
+}
 
 
 function initMenu() {
@@ -14,7 +43,11 @@ function initMenu() {
     menu.addClass('show');
   })
 
-  menu.click(function () {
+  menu.find('.clozBtn').click(function () {
+    menu.removeClass('show');
+  })
+  
+  menu.find('.menuBtn').click(function () {
     menu.removeClass('show');
   })
 

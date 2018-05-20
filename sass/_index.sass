@@ -42,12 +42,53 @@ h2
 	background-color: #858484
 	@include filter-gradient(#858484, #616161, horizontal)
 	@include background-image(linear-gradient(left, #858484 32%,#616161 65%))
-	
+.selectWrap
+	position: relative
+	display: block
+	width: 20em
+	height: 3em
+	line-height: 3
+	overflow: hidden
+	// border-radius: .25em
+	display: inline-block
+	vertical-align: text-top
+	margin-top: -12px	
+	select  
+		+appearance(none)
+		outline: 0
+		box-shadow: none 
+		border: 0 !important
+		background-image: none
+		width: 100%
+		height: 100%
+		margin: 0
+		padding: 0 0 0 .5em
+		cursor: pointer
+		font-size: 1.4rem
+		background-color: transparent
+		option 
+			padding: 5px 0
+	&:-ms-expand
+		display: none
+	&:after 
+		content: '\25BC'
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		padding: 0 1em
+		pointer-events: none
+		+dTime(0.3s)
+
+
 .btn
 	cursor: pointer
-	+border-radius(5px)
-	padding: .4em 2em	
+	+border-radius(25px)
+	// padding: .4em 2em	
 	display: inline-block
+	height: 50px
+	line-height: 50px
+
 	+dTime(.3s)
 
 	&:hover 
@@ -59,7 +100,7 @@ h2
 		
 
 	&.bigBtn	
-		padding: .4em 4em
+		padding: 0 4em
 		+fm
 		letter-spacing: 0.4em	
 
@@ -132,11 +173,25 @@ h2
 		position: absolute
 		top: 10px
 		left: 30px
+
+		
 	.mainMenu
 		position: absolute
 		right: 0
-		top: 15px
+		top: 25px
 		display: inline-block
+		.selectWrap
+			position: relative
+			width: auto
+			&:before 
+				content: ''
+				+bg('icon/earth.png')
+				top: 9px
+				left: 8px
+				position: absolute
+			select
+				padding: 0 30px
+				
 		+pad2
 			position: fixed
 			width: 100%
@@ -148,6 +203,8 @@ h2
 			@include background-image(linear-gradient(top, #eaf2f4 0%,#ece8ee 100%))
 			+divGoVerticalCenter_forMom
 			display: none
+			.icon 
+				display: none
 			&.show
 				display: block
 			.clozBtn
@@ -164,10 +221,22 @@ h2
 					+fb
 					&:not(:last-child)
 						margin-bottom: 20px
-				
+				.selectWrap
+					margin-top: 0
+					height: 4em
+					line-height: 4
+					
+					&:before 
+						display: none
+					select 
+						+fb
+						option
+							font-size: 14px
+						
+
 		.menuBtn
-			+fs 
-			padding: 7px 20px
+			font-size: 1.4rem
+			padding: 7px 15px
 			margin: 0 5px
 			display: inline-block
 			+dTime(.3s)
@@ -191,6 +260,14 @@ h2
 					+opacity(.2)
 					+scale(1)
 				// color: white
+			&.boldBtn
+				font-weight: bold
+			.icon 
+				margin-top: 4px
+				margin-right: 2px
+			
+
+			
 .partclieBg
 	position: absolute
 	top: 0
@@ -301,24 +378,38 @@ h2
 		.content
 			position: relative
 			margin-bottom: 80px
-			
+			padding-right: 400px
+			min-height: 350px
 			.picWrap
-				+aspect-ratio(1000,527)	
-				position: relative
-				margin: 0 auto 30px
-				max-width: 1000px
+				position: absolute
+				height: 100%
+				width: 100%
+				top: 0	
+				left: 0
+
 				.pic
-					+bgi('earth.png')
-					width: 100%
-					height: 100%
+					+bg('earth.png')
 					+containBg
 					position: absolute
-					top: 0
-					left: 0
+					top: 50%
+					+transform(translateY(-50%))
+					right: 0
 					
+			+pad2
+				padding-right: 0
+				.picWrap
+					position: relative
+					width: auto
+					height: auto
+					margin-bottom: 50px
+					.pic
+						position: relative
+						top: 0
+						+transform(translateX(-50%),translateY(0%))
+						left: 50%
+						
 
-			.pageTitle
-				width: 100%  
+			
 				
 			// +pad
 			// 	margin-bottom: 0
@@ -351,9 +442,59 @@ h2
 					left: 0
 					width: 100%
 					height: 100%
+@include keyframes(show) 
+	0% 
+		opacity: 0
 
-		
-		
+	100% 
+		opacity: 0.4
+ 
+
+
+@include keyframes(hide) 
+	0% 
+		opacity: 0.4
+
+	100% 
+		opacity: 0
+ 
+
+.flipClockWrap		
+	// text-align: center
+	margin-top: 30px
+	position: relative
+	height: 130px
+	.flipClock
+		// width: auto
+		position: absolute
+		top: 0
+		left: 50%
+		+transform(translateX(-50%))
+
+		width: 580px
+		margin: 0 auto
+		display: inline-block
+		.flip-clock-dot
+			background-color: #afafaf
+		ul 
+			margin: 2px
+			li 
+				a 
+					div 
+						div.inn
+							background-color: #e9e9e9
+							color: #575757
+							text-shadow: 0 1px 2px #a2a2a2
+							font-weight: lighter
+		.flip-clock-divider 
+			.flip-clock-label
+				text-transform: uppercase
+				top: auto
+				bottom: -2em
+				+fs
+				right: -68px
+				color: #b9b9b9
+				+transform(translateX(50%))
 #feature
 	overflow: hidden
 	.gridContainer
@@ -676,7 +817,7 @@ h2
 #contact
 	.gridContainer
 		min-height: auto
-		padding: 50px 0
+		padding: 50px 25px
 		.contentWrap
 			+phone 
 				padding: 0 50px
