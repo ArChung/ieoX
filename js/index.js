@@ -1,4 +1,4 @@
-var doPageAnimation = false;
+var doPageAnimation = true;
 
 $(document).ready(function () {
 
