@@ -64,7 +64,7 @@ h2
 		margin: 0
 		padding: 0 0 0 .5em
 		cursor: pointer
-		font-size: 1.4rem
+		font-size: 1.3rem
 		background-color: transparent
 		option 
 			padding: 5px 0
@@ -235,11 +235,10 @@ h2
 						
 
 		.menuBtn
-			font-size: 1.4rem
+			font-size: 1.3rem
 			padding: 7px 15px
-			margin: 0 5px
 			display: inline-block
-			+dTime(.3s)
+			+dTime(.2s)
 			
 			position: relative
 			&:before
@@ -1231,3 +1230,19 @@ h2
 		right: -5px
 		+dTime(.1s)
 		
+#socialWrap
+	+phone 
+		display: none
+	position: fixed
+	right: 0px
+	top: 50%
+	+transform(translateY(-50%))
+	z-index: 5
+	* + *
+		margin-top: 10px
+	a 
+		display: block
+		+dTime(0.2s)
+		+scale(0.7)
+		&:hover 
+			+scale(1)

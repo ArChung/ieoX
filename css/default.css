@@ -3158,6 +3158,46 @@ a:hover {
   height: 22px;
   background-image: url("../images/icon/mail.png");
 }
+.icon.telagram {
+  width: 47px;
+  height: 47px;
+  background-image: url("../images/icon/telegram.png");
+}
+.icon.twitter {
+  width: 53px;
+  height: 44px;
+  background-image: url("../images/icon/twitter.png");
+}
+.icon.medium {
+  width: 50px;
+  height: 43px;
+  background-image: url("../images/icon/medium.png");
+}
+.icon.reddit {
+  width: 49px;
+  height: 49px;
+  background-image: url("../images/icon/reddit.png");
+}
+.icon.facebook {
+  width: 49px;
+  height: 48px;
+  background-image: url("../images/icon/fb.png");
+}
+.icon.linkedin-gray {
+  width: 49px;
+  height: 49px;
+  background-image: url("../images/icon/linkedin_gray.png");
+}
+.icon.youtube {
+  width: 50px;
+  height: 35px;
+  background-image: url("../images/icon/youtube.png");
+}
+.icon.bitcoin {
+  width: 49px;
+  height: 48px;
+  background-image: url("../images/icon/bitcoin.png");
+}
 
 /*pages_layout */
 html, body {
@@ -3212,7 +3252,7 @@ h2 {
   margin: 0;
   padding: 0 0 0 0.5em;
   cursor: pointer;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   background-color: transparent;
 }
 .selectWrap select option {
@@ -3454,14 +3494,13 @@ h2 {
   }
 }
 .header .mainMenu .menuBtn {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   padding: 7px 15px;
-  margin: 0 5px;
   display: inline-block;
-  -moz-transition: all, 0.3s;
-  -o-transition: all, 0.3s;
-  -webkit-transition: all, 0.3s;
-  transition: all, 0.3s;
+  -moz-transition: all, 0.2s;
+  -o-transition: all, 0.2s;
+  -webkit-transition: all, 0.2s;
+  transition: all, 0.2s;
   position: relative;
 }
 .header .mainMenu .menuBtn:before {
@@ -4768,6 +4807,42 @@ h2 {
   -o-transition: all, 0.1s;
   -webkit-transition: all, 0.1s;
   transition: all, 0.1s;
+}
+
+#socialWrap {
+  position: fixed;
+  right: 0px;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 5;
+}
+@media screen and (max-width: 768px) {
+  #socialWrap {
+    display: none;
+  }
+}
+#socialWrap * + * {
+  margin-top: 10px;
+}
+#socialWrap a {
+  display: block;
+  -moz-transition: all, 0.2s;
+  -o-transition: all, 0.2s;
+  -webkit-transition: all, 0.2s;
+  transition: all, 0.2s;
+  -moz-transform: scale(0.7, 0.7);
+  -ms-transform: scale(0.7, 0.7);
+  -webkit-transform: scale(0.7, 0.7);
+  transform: scale(0.7, 0.7);
+}
+#socialWrap a:hover {
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
 }
 
 .padShow {
