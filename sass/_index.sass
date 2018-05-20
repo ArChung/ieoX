@@ -1216,3 +1216,18 @@ h2
 					.qBox 
 						.openBtn
 							+rotate(0deg)
+
+.back2topBtn
+	cursor: pointer
+	+dTime(.3s)
+	position: fixed
+	right: -80px
+	bottom: 50px
+	+bg('back2Top.png')
+	z-index: 4
+	&.show
+		right: 0
+	&:hover 
+		right: -5px
+		+dTime(.1s)
+		

@@ -4,22 +4,41 @@ $(document).ready(function () {
 
   // initLoading();
   initChart();
-  
+
   initMenu();
 
   initFlipClock();
 
-  if(doPageAnimation){
+  if (doPageAnimation) {
     initParticleBg();
   }
 
   initQA();
-  
+
+  initBack2TopBtn();
+
 })
 
 
+function initBack2TopBtn() {
+  var b = $('.back2topBtn');
 
-function initQA(){
+  $(document).scroll(function () {
+    console.log($(document).scrollTop())
+    if ($(document).scrollTop() > 600) {
+      b.addClass('show')
+    } else {
+      b.removeClass('show')
+
+    }
+  })
+
+  b.click(function () {
+    ChungTool.pageScrollAni(0)
+  })
+}
+
+function initQA() {
   var qa = $('#qa');
   $('.qaBtn').click(function (e) {
     e.preventDefault();
@@ -33,22 +52,22 @@ function initQA(){
   })
 
   qa.find('.qBox').click(function (e) {
-   $(this).closest('.qaBox').toggleClass('open')
+    $(this).closest('.qaBox').toggleClass('open')
   })
 
 }
 
-function initFlipClock(){
+function initFlipClock() {
   var clock = $('#flipClock');
-  if(clock){
+  if (clock) {
     var futureDate = clock.attr('data-countTo').split('/');
-    var futureTime = new Date(+futureDate[0],+futureDate[1]-1,+futureDate[2],0,0,0,0);
+    var futureTime = new Date(+futureDate[0], +futureDate[1] - 1, +futureDate[2], 0, 0, 0, 0);
     // var currentDate = clock.attr('data-currentTime');
     var currentDate = new Date(+clock.attr('data-currentTime'))
     console.log('currentDate: ', currentDate.toLocaleString());
     console.log('futureTime: ', futureTime.toLocaleString());
-    
-    var diff = futureTime.getTime() / 1000 - currentDate.getTime() /1000;
+
+    var diff = futureTime.getTime() / 1000 - currentDate.getTime() / 1000;
 
     // Instantiate a coutdown FlipClock
     clock.FlipClock(diff, {
@@ -88,7 +107,7 @@ function initMenu() {
 
 
 function initParticleBg() {
-  var aniConfigArr = ['js/animation-bubble-config.json','js/animation-particle-config.json', 'js/animation-bubble-config-2.json','js/animation-particle-config.json']
+  var aniConfigArr = ['js/animation-bubble-config.json', 'js/animation-particle-config.json', 'js/animation-bubble-config-2.json', 'js/animation-particle-config.json']
   var selectorArr = ['indexParticleBg', 'featureParticleBg', 'teamParticleBg', 'chartParticleBg']
   var selector = '.partclieBg';
   var psnArr = [];
@@ -102,7 +121,7 @@ function initParticleBg() {
       var index = $(selector).index(t);
       if (!psnArr[index]) {
         particlesJS.load(selectorArr[index], aniConfigArr[index]);
-        psnArr[index] = count ; 
+        psnArr[index] = count;
         count++;
       } else {
         pJSDom[psnArr[index]].pJS.fn.vendors.start();
@@ -112,16 +131,16 @@ function initParticleBg() {
       var t = $(e);
       var index = $(selector).index(t);
       clearAnimation(psnArr[index])
-      
+
     });
 
 
-    function clearAnimation(index){
-      cancelRequestAnimFrame(pJSDom[index].pJS.fn.checkAnimFrame);
-      cancelRequestAnimFrame(pJSDom[index].pJS.fn.drawAnimFrame);
-      pJSDom[index].pJS.fn.particlesEmpty();
-      pJSDom[index].pJS.fn.canvasClear();
-    }
+  function clearAnimation(index) {
+    cancelRequestAnimFrame(pJSDom[index].pJS.fn.checkAnimFrame);
+    cancelRequestAnimFrame(pJSDom[index].pJS.fn.drawAnimFrame);
+    pJSDom[index].pJS.fn.particlesEmpty();
+    pJSDom[index].pJS.fn.canvasClear();
+  }
 }
 
 
@@ -133,14 +152,14 @@ function initChart() {
   var chart = new Chartist.Pie('#chart01', {
     series: data1,
   }, {
-      donut: true,
-    });
+    donut: true,
+  });
 
   var chart2 = new Chartist.Pie('#chart02', {
     series: data2,
   }, {
-      donut: true,
-    });
+    donut: true,
+  });
 
   chart.on('created', function () {
     getPosition($('#chart01'));
