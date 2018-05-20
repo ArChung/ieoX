@@ -4643,6 +4643,108 @@ h2 {
   top: -60px;
 }
 
+.popPage {
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+  overflow-y: scroll;
+  position: fixed;
+  padding: 50px 25px;
+}
+.popPage .gridContainer {
+  margin: 0 auto;
+  max-width: 1200px;
+  min-height: 650px;
+  padding: 120px 50px;
+  background-color: white;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  position: relative;
+  border: 1px solid #8a8c90;
+}
+.popPage .gridContainer .clozBtn {
+  width: 60px;
+  height: 60px;
+  background-image: url("../images/cloz.png");
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+#qa .gridContainer {
+  background-image: url("../images/indexbg.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+#qa .gridContainer .content .pageTitle {
+  font-size: 3rem;
+  letter-spacing: 0.4rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#qa .gridContainer .content .qaBox .qBox {
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  line-height: 3.5rem;
+  line-height: inherit;
+  position: relative;
+  padding: 15px 50px 15px 15px;
+  margin-top: 30px;
+  letter-spacing: normal;
+}
+#qa .gridContainer .content .qaBox .qBox:after {
+  background-color: lightgray;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  content: "";
+}
+#qa .gridContainer .content .qaBox .qBox .openBtn {
+  width: 42px;
+  height: 42px;
+  background-image: url("../images/arr.png");
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s;
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+#qa .gridContainer .content .qaBox .aBox {
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  line-height: 3.5rem;
+  line-height: inherit;
+  padding: 0 50px 0 15px;
+  font-weight: bold;
+  max-height: 0;
+  overflow: hidden;
+  -moz-transition: all, 0.6s;
+  -o-transition: all, 0.6s;
+  -webkit-transition: all, 0.6s;
+  transition: all, 0.6s;
+  letter-spacing: normal;
+}
+#qa .gridContainer .content .qaBox.open .aBox {
+  padding: 15px 50px 15px 15px;
+  max-height: 350px;
+}
+#qa .gridContainer .content .qaBox.open .qBox .openBtn {
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
 .padShow {
   display: none !important;
 }

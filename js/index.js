@@ -13,8 +13,30 @@ $(document).ready(function () {
     initParticleBg();
   }
 
+  initQA();
   
 })
+
+
+
+function initQA(){
+  var qa = $('#qa');
+  $('.qaBtn').click(function (e) {
+    e.preventDefault();
+    simpleShow(qa);
+    ChungTool.lockScroll();
+  })
+
+  qa.find('.clozBtn').click(function (e) {
+    simpleHide(qa);
+    ChungTool.unLockScroll();
+  })
+
+  qa.find('.qBox').click(function (e) {
+   $(this).closest('.qaBox').toggleClass('open')
+  })
+
+}
 
 function initFlipClock(){
   var clock = $('#flipClock');
@@ -46,7 +68,7 @@ function initMenu() {
   menu.find('.clozBtn').click(function () {
     menu.removeClass('show');
   })
-  
+
   menu.find('.menuBtn').click(function () {
     menu.removeClass('show');
   })
