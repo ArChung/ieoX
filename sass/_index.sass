@@ -262,7 +262,7 @@ h2
 			&.boldBtn
 				font-weight: bold
 			.icon 
-				margin-top: 4px
+				margin-top: 0px
 				margin-right: 2px
 			
 
@@ -914,17 +914,28 @@ h2
 						background-color: #f6f4f4
 						&:after 
 							border-left-color: #f6f4f4
-					.pic 
-						margin: 0 auto
-						&.p1
-							+bg('step1.png')
-						&.p2 
-							+bg('step2.png') 
-						&.p3
-							+bg('step3.png') 
-					h1 
+					// .pic 
+					// 	margin: 0 auto
+					// 	&.p1
+					// 		+bg('step1.png')
+					// 	&.p2 
+					// 		+bg('step2.png') 
+					// 	&.p3
+					// 		+bg('step3.png') 
+					.stepDate
+						.stepTxt
+							+fm
+							letter-spacing: auto
+							.numTxt
+								+fb
+								// vertical-align: text-bottom
+					.dateTxt
+						+fss
+						margin-top: -5px
+						
+					h1  
 						+fm
-						margin-top: 30px
+						margin-top: 15px
 					h2 
 						+fss
 				
@@ -1047,6 +1058,7 @@ h2
 							&.c7
 								&:after 
 									background-color: #d2d2d2
+							
 
 .chartBox
 	.chart
@@ -1065,6 +1077,10 @@ h2
 		.ct-series-f .ct-slice-donut
 			stroke: #808080
 		.ct-series-g .ct-slice-donut
+			stroke: #d2d2d2
+		.ct-series-h .ct-slice-donut
+			stroke: #808080
+		.ct-series-i .ct-slice-donut
 			stroke: #d2d2d2
 		
 		
@@ -1096,7 +1112,7 @@ h2
 			.c5 
 				.txtBox
 					right: 22px
-					top: -30px
+					top: -45px
 			.c6 
 				.txtBox
 					right: 6px

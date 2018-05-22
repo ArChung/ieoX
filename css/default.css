@@ -3394,7 +3394,7 @@ h2 {
   }
 }
 .header .logo {
-  width: 171px;
+  width: 170px;
   height: 76px;
   background-image: url("../images/logo.png");
   position: absolute;
@@ -3538,7 +3538,7 @@ h2 {
   font-weight: bold;
 }
 .header .mainMenu .menuBtn .icon {
-  margin-top: 4px;
+  margin-top: 0px;
   margin-right: 2px;
 }
 
@@ -4406,28 +4406,28 @@ h2 {
 #chart .gridContainer .stepContainer .stepWrap .stepBox:nth-child(2n):after {
   border-left-color: #f6f4f4;
 }
-#chart .gridContainer .stepContainer .stepWrap .stepBox .pic {
-  margin: 0 auto;
+#chart .gridContainer .stepContainer .stepWrap .stepBox .stepDate .stepTxt {
+  font-size: 2.2rem;
+  letter-spacing: 0.3rem;
+  letter-spacing: auto;
 }
-#chart .gridContainer .stepContainer .stepWrap .stepBox .pic.p1 {
-  width: 195px;
-  height: 41px;
-  background-image: url("../images/step1.png");
+#chart .gridContainer .stepContainer .stepWrap .stepBox .stepDate .stepTxt .numTxt {
+  font-size: 3rem;
+  letter-spacing: 0.4rem;
 }
-#chart .gridContainer .stepContainer .stepWrap .stepBox .pic.p2 {
-  width: 193px;
-  height: 41px;
-  background-image: url("../images/step2.png");
+#chart .gridContainer .stepContainer .stepWrap .stepBox .dateTxt {
+  font-size: 1.2rem;
+  margin-top: -5px;
 }
-#chart .gridContainer .stepContainer .stepWrap .stepBox .pic.p3 {
-  width: 197px;
-  height: 41px;
-  background-image: url("../images/step3.png");
+@media screen and (max-width: 768px) {
+  #chart .gridContainer .stepContainer .stepWrap .stepBox .dateTxt {
+    font-size: 1.6rem;
+  }
 }
 #chart .gridContainer .stepContainer .stepWrap .stepBox h1 {
   font-size: 2.2rem;
   letter-spacing: 0.3rem;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 #chart .gridContainer .stepContainer .stepWrap .stepBox h2 {
   font-size: 1.2rem;
@@ -4618,6 +4618,12 @@ h2 {
 .chartBox .chart .ct-series-g .ct-slice-donut {
   stroke: #d2d2d2;
 }
+.chartBox .chart .ct-series-h .ct-slice-donut {
+  stroke: #808080;
+}
+.chartBox .chart .ct-series-i .ct-slice-donut {
+  stroke: #d2d2d2;
+}
 .chartBox.cb1 .chatDataWrap .chartData .txtBox {
   text-align: right;
   right: 0;
@@ -4643,7 +4649,7 @@ h2 {
 }
 .chartBox.cb1 .chatDataWrap .c5 .txtBox {
   right: 22px;
-  top: -30px;
+  top: -45px;
 }
 .chartBox.cb1 .chatDataWrap .c6 .txtBox {
   right: 6px;
