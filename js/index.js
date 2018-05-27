@@ -85,8 +85,8 @@ function initSwipers() {
     }
   });
 
-  
-  
+
+
 
 }
 
@@ -219,91 +219,109 @@ function initParticleBg() {
 function initChart() {
   var data1 = [55, 10, 15, 3, 10, 2, 5];
   var data2 = [40, 15, 30, 15];
+  TweenMax.set('.chatDataWrap .chartData',{autoAlpha:0})
+  inView('#chart01').once('enter',function(){
+    var chart = new Chartist.Pie('#chart01', {
+      series: data1,
+    }, {
+      donut: true,
+    });
+
+    chart.on('draw', function (data) {
+      drawFunc(data, $('#chart .cb1'))
+    });
+  })
+  
+  inView('#chart02').once('enter',function(){
+    var chart2 = new Chartist.Pie('#chart02', {
+      series: data2,
+    }, {
+      donut: true,
+    });
+
+    chart2.on('draw', function (data) {
+      drawFunc(data, $('#chart .cb2'))
+    });
+  })
 
 
-  var chart = new Chartist.Pie('#chart01', {
-    series: data1,
-  }, {
-    donut: true,
-  });
+  function drawFunc(data, chartBox) {
+    var durring = .6;
+    if (data.type === 'slice') {
+      var pathLength = data.element._node.getTotalLength();
 
-  var chart2 = new Chartist.Pie('#chart02', {
-    series: data2,
-  }, {
-    donut: true,
-  });
+      // Set a dasharray that matches the path length as prerequisite to animate dashoffset
+      data.element.attr({
+        'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
+      });
+  
+      // Create animation definition while also assigning an ID to the animation for later sync usage
+      var animationDefinition = {
+        'stroke-dashoffset': {
+          id: 'anim' + data.index,
+          dur: durring * 1000,
+          from: -pathLength + 'px',
+          to:  '0px',
+          // easing: Chartist.Svg.Easing.easeOutQuint,
+          // We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
+          fill: 'freeze'
+        }
+      };
+  
+      // If this was not the first slice, we need to time the animation so that it uses the end sync event of the previous animation
+      if(data.index !== 0) {
+        animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
+      }
+  
+      // We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
+      data.element.attr({
+        'stroke-dashoffset': -pathLength + 'px'
+      });
+  
+      // We can't use guided mode as the animations need to rely on setting begin manually
+      // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
+      data.element.animate(animationDefinition, false);
 
-  chart.on('created', function () {
-    getPosition($('#chart01'));
-  });
+      
+    }
 
+    if (data.type === 'label') {
 
-  chart2.on('created', function () {
-    getPosition($('#chart02'));
-  });
-
-  // chart.on('draw', function (data) {
-  //   drawFunc(data);
-  //   // console.log('hi');
-  // });
-  // chart2.on('draw', drawFunc);
-
-
-  // function drawFunc(data) {
-  //   if (data.type === 'slice') {
-
-  //     // Get the total path length in order to use for dash array animation
-  //     var pathLength = data.element._node.getTotalLength();
-
-  //     // Set a dasharray that matches the path length as prerequisite to animate dashoffset
-  //     data.element.attr({
-  //       'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
-  //     });
-  //     // Create animation definition while also assigning an ID to the animation for later sync usage
-  //     var animationDefinition = {
-  //       'stroke-dashoffset': {
-  //         id: 'anim' + data.index,
-  //         dur: 600,
-  //         from: -pathLength + 'px',
-  //         to: '0px',
-  //         easing: Chartist.Svg.Easing.easeInOutQuad,
-  //         // We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
-  //         fill: 'freeze'
-  //       }
-  //     };
-
-  //     // If this was not the first slice, we need to time the animation so that it uses the end sync event of the previous animation
-  //     if (data.index !== 0) {
-  //       animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
-  //     }
-
-  //     // We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
-  //     data.element.attr({
-  //       'stroke-dashoffset': -pathLength + 'px'
-  //     });
-
-  //     // We can't use guided mode as the animations need to rely on setting begin manually
-  //     // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
-
-
-  //     setTimeout(function () {  
-  //       console.log('start');
-  //       var emitter = Chartist.EventEmitter();
-  //       data.element.animate(animationDefinition, false, emitter);
-  //       emitter.addEventHandler('animationBegin', (e) => {
-  //       console.log(e);
-  //     });
-  //     },2000)
-  //   }
-
-
-  // }
-
-  // For the sake of the example we update the chart every time it's created with a delay of 8 seconds
+      data.element.animate({
+        opacity: {
+          from: 0,
+          to: 0
+        },
+      }, false);
 
 
 
+      var point = chartBox.find('.chatDataWrap .chartData').eq(data.index);
+      var num = +point.find('.rate').html();
+      console.log('num: ', num);
+      point.css('top', data.y);
+      point.css('left', data.x);
 
+
+      if (num > 30) {
+        point.addClass('dot_big');
+      } else if (num > 10 && num <= 30) {
+        point.addClass('dot_mid');
+      } else {
+        point.addClass('dot_small');
+      }
+
+      var time1 = durring;
+      var time2 = durring*data.index+durring/2;
+      TweenMax.to(point,time1,{autoAlpha:1,delay:time2})
+      TweenMax.from(point.find('.txtBox'),time1,{marginTop:10,delay:time2});
+      var game = {score:0}
+      TweenLite.to(game, time1, {score:num, delay:time2,roundProps:"score", onUpdate:updateHandler});
+      function updateHandler() {
+        point.find('.rate').html(game.score);
+      }
+    }
+  }
 
 }
 
