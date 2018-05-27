@@ -4690,7 +4690,7 @@ h2 {
 }
 .chartBox.cb1 .chatDataWrap .c6 .txtBox {
   right: 6px;
-  top: -60px;
+  top: -90px;
 }
 .chartBox.cb1 .chatDataWrap .c7 .txtBox {
   top: auto;
@@ -4982,11 +4982,11 @@ h2 {
   width: 100%;
   padding: 10px 30px;
   background-color: #fff;
-  height: 14em;
+  height: 14rem;
 }
 @media screen and (max-width: 768px) {
   .swiper-box .swiper-container .swiper-wrapper .swiper-slide .txtBox {
-    height: 16em;
+    height: 16rem;
   }
 }
 .swiper-box .swiper-container .swiper-wrapper .swiper-slide .txtBox h1 {

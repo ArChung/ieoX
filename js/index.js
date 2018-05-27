@@ -230,6 +230,19 @@ function initChart() {
     chart.on('draw', function (data) {
       drawFunc(data, $('#chart .cb1'))
     });
+
+    chart.on('created', function(){
+      chart.detach(); // it will detach resize and media query listeners
+    });
+  
+    //then update the chart only when window.width() changes
+    var width = $(window).width();
+    $(window).resize(function() {
+      if($(window).width() != width) {
+        width = $(window).width(); // update the width width
+        chart.update();
+      }
+    });
   })
   
   inView('#chart02').once('enter',function(){
@@ -241,6 +254,19 @@ function initChart() {
 
     chart2.on('draw', function (data) {
       drawFunc(data, $('#chart .cb2'))
+    });
+
+    chart2.on('created', function(){
+      chart.detach(); // it will detach resize and media query listeners
+    });
+  
+    //then update the chart only when window.width() changes
+    var width = $(window).width();
+    $(window).resize(function() {
+      if($(window).width() != width) {
+        width = $(window).width(); // update the width width
+        chart2.update();
+      }
     });
   })
 
@@ -313,7 +339,7 @@ function initChart() {
 
       var time1 = durring;
       var time2 = durring*data.index+durring/2;
-      TweenMax.to(point,time1,{autoAlpha:1,delay:time2})
+      TweenMax.fromTo(point,time1,{autoAlpha:0},{autoAlpha:1,delay:time2})
       TweenMax.from(point.find('.txtBox'),time1,{marginTop:10,delay:time2});
       var game = {score:0}
       TweenLite.to(game, time1, {score:num, delay:time2,roundProps:"score", onUpdate:updateHandler});
