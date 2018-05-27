@@ -26,12 +26,14 @@
     <!-- css start-->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <link rel="stylesheet" href="css/flipclock.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/default.css">
     <!-- js start-->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="js/lib/swiper.min.js"></script>
     <script src="js/lib/flipclock.min.js"></script>
     <!-- archung js -->
     <script type="text/javascript" src="js/lib/visible.js"></script>
@@ -1062,6 +1064,142 @@
                 </div>
             </div>
         </div>
+        <div class="pageContainer show" id='news'>
+            <div class="gridContainer">
+                <div class="pageTitle">新聞</div>
+                <div class="swiper-box" id='newsSwipter'>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" target='_blank'>
+                                    <div class="picBox" style='background-image: url(images/demo.png);'></div>
+                                    <div class="txtBox">
+                                        <h1>活動名稱1</h1>
+                                        <h2 class='limitTxt'>內容活動內容活活動內容活動內容活動內容活動內容活動內容活動內容</h2>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" target='_blank'>
+                                    <div class="picBox" style='background-image: url(images/demo.png);'></div>
+                                    <div class="txtBox">
+                                        <h1>活動名稱2</h1>
+                                        <h2 class='limitTxt'>內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容</h2>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" target='_blank'>
+                                    <div class="picBox" style='background-image: url(images/demo.png);'></div>
+                                    <div class="txtBox">
+                                        <h1>活動名稱3</h1>
+                                        <h2 class='limitTxt'>內容活動活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容</h2>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" target='_blank'>
+                                    <div class="picBox" style='background-image: url(images/demo.png);'></div>
+                                    <div class="txtBox">
+                                        <h1>活動名稱4</h1>
+                                        <h2 class='limitTxt'>內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容</h2>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" target='_blank'>
+                                    <div class="picBox" style='background-image: url(images/demo.png);'></div>
+                                    <div class="txtBox">
+                                        <h1>活動名稱5</h1>
+                                        <h2 class='limitTxt'>內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容</h2>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" target='_blank'>
+                                    <div class="picBox" style='background-image: url(images/demo.png);'></div>
+                                    <div class="txtBox">
+                                        <h1>活動名稱7</h1>
+                                        <h2 class='limitTxt'>內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容</h2>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+        <div class="pageContainer show" id='events'>
+                <div class="gridContainer">
+                    <div class="pageTitle">活動</div>
+                    <div class="swiper-box" id='eventSwipter'>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#" target='_blank'>
+                                        <div class="picBox" style='background-image: url(images/demo.png);'></div>
+                                        <div class="txtBox">
+                                            <h1>活動名稱1</h1>
+                                            <h2 class='limitTxt'>內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" target='_blank'>
+                                        <div class="picBox" style='background-image: url(images/demo.png);'></div>
+                                        <div class="txtBox">
+                                            <h1>活動名稱2</h1>
+                                            <h2 class='limitTxt'>內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" target='_blank'>
+                                        <div class="picBox" style='background-image: url(images/demo.png);'></div>
+                                        <div class="txtBox">
+                                            <h1>活動名稱3</h1>
+                                            <h2 class='limitTxt'>內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" target='_blank'>
+                                        <div class="picBox" style='background-image: url(images/demo.png);'></div>
+                                        <div class="txtBox">
+                                            <h1>活動名稱4</h1>
+                                            <h2 class='limitTxt'>內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" target='_blank'>
+                                        <div class="picBox" style='background-image: url(images/demo.png);'></div>
+                                        <div class="txtBox">
+                                            <h1>活動名稱5</h1>
+                                            <h2 class='limitTxt'>內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" target='_blank'>
+                                        <div class="picBox" style='background-image: url(images/demo.png);'></div>
+                                        <div class="txtBox">
+                                            <h1>活動名稱7</h1>
+                                            <h2 class='limitTxt'>內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容活動內容</h2>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
         <div class="pageContainer" id='contact'>
             <div class="gridContainer">
                 <div class="contentWrap">

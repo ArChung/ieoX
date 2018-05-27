@@ -17,14 +17,86 @@ $(document).ready(function () {
 
   initBack2TopBtn();
 
+  initSwipers();
+
+
 })
+
+function initSwipers() {
+  // var newsSwiper = $('#newsSwipter');
+
+  var mySwiper = new Swiper('#newsSwipter .swiper-container', {
+    speed: 400,
+    spaceBetween: 100,
+    roundLengths: true,
+    slidesPerView: 4,
+    spaceBetween: 25,
+    // loop: true,
+    pagination: {
+      el: '#newsSwipter .swiper-pagination',
+    },
+    navigation: {
+      nextEl: '#newsSwipter .swiper-button-next',
+      prevEl: '#newsSwipter .swiper-button-prev',
+    },
+    breakpoints: {
+      1400: {
+        slidesPerView: 3,
+        spaceBetween: 25,
+      },
+      1240: {
+        slidesPerView: 2,
+        spaceBetween: 25,
+      },
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+    }
+  });
+
+  var mySwiper = new Swiper('#eventSwipter .swiper-container', {
+    speed: 400,
+    spaceBetween: 100,
+    roundLengths: true,
+    slidesPerView: 3,
+    spaceBetween: 25,
+    // loop: true,
+    pagination: {
+      el: '#eventSwipter .swiper-pagination',
+    },
+    navigation: {
+      nextEl: '#eventSwipter .swiper-button-next',
+      prevEl: '#eventSwipter .swiper-button-prev',
+    },
+    breakpoints: {
+      1400: {
+        slidesPerView: 3,
+        spaceBetween: 25,
+      },
+      1240: {
+        slidesPerView: 2,
+        spaceBetween: 25,
+      },
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+    }
+  });
+
+  
+  
+
+}
+
 
 
 function initBack2TopBtn() {
   var b = $('.back2topBtn');
 
   $(document).scroll(function () {
-    console.log($(document).scrollTop())
+    // console.log($(document).scrollTop())
     if ($(document).scrollTop() > 600) {
       b.addClass('show')
     } else {
@@ -64,8 +136,8 @@ function initFlipClock() {
     var futureTime = new Date(+futureDate[0], +futureDate[1] - 1, +futureDate[2], 0, 0, 0, 0);
     // var currentDate = clock.attr('data-currentTime');
     var currentDate = new Date(+clock.attr('data-currentTime'))
-    console.log('currentDate: ', currentDate.toLocaleString());
-    console.log('futureTime: ', futureTime.toLocaleString());
+    // console.log('currentDate: ', currentDate.toLocaleString());
+    // console.log('futureTime: ', futureTime.toLocaleString());
 
     var diff = futureTime.getTime() / 1000 - currentDate.getTime() / 1000;
 

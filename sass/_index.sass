@@ -146,7 +146,10 @@ h2
 	.pageContainer
 		width: 100%
 		position: relative
-		&:nth-child(2n+1)
+		display: none
+		&.show 
+			display: block
+		&:nth-child(2n)
 			background-color: #eaf2f4
 			@include filter-gradient(#eaf2f4, #ece8ee, vertical)
 			@include background-image(linear-gradient(top, #eaf2f4 0%,#ece8ee 100%))
@@ -1262,3 +1265,73 @@ h2
 		+scale(0.7)
 		&:hover 
 			+scale(1)
+#news
+	.gridContainer
+		.pageTitle
+			+fb
+			text-align: center
+#events
+	.gridContainer
+		.pageTitle
+			+fb
+			text-align: center
+.swiper-box
+	width: 100%	
+	position: relative	
+	.swiper-button-prev
+		+bg('swiperBtn.png')
+		background-size: contain
+		margin-top: -50px
+		+phone 
+			left: -40px
+	.swiper-button-next
+		+bg('swiperBtn.png')
+		background-size: contain
+		+rotate(180deg)
+		margin-top: -50px
+		+phone 
+			right: -40px
+	.swiper-pagination-bullet-active
+		background-color: #313131
+	.swiper-button-disabled
+		+opacity(0.1)
+		+dTime(0.3s)
+	.swiper-container
+		width: calc(100% - 160px)
+		margin: 50px auto 0
+		padding-bottom: 50px
+		+phone 
+			width: calc(100% - 40px)
+		.swiper-wrapper
+			.swiper-pagination
+				bottom: 0
+			.swiper-slide
+				+border-radius(15px)
+				overflow: hidden
+				// border: 1px solid #eee
+				+shadowDiv
+				a 
+					display: block 
+					width: 100%
+				.picBox
+					width: 100%
+					+coverBg
+					height: 250px
+				.txtBox
+					width: 100%
+					padding: 10px 30px
+					background-color: #fff
+					height: 14em
+					+phone 
+						height: 16em
+					h1 
+						+fs
+						line-height: inherit
+						letter-spacing: normal
+					h2
+						+fss
+						line-height: inherit
+						letter-spacing: normal
+						margin-top: 5px
+						+multiLineEllipsis(1.2em,5,white)
+				

@@ -46,7 +46,7 @@
 	&:hover 
 		+opacity(0.7)
 =shadowDiv 
-	+box-shadow(2px 2px 2px rgba(20%,20%,40%,0.6),4px 4px 6px rgba(20%,20%,40%,0.4),6px 6px 12px rgba(20%,20%,40%,0.4))
+	+box-shadow(0px 2px 4px rgba(20%,20%,20%,0.2))
 //維持長寬比，內容塞在子內容content裡，設定父層的寬
 =aspect-ratio($width, $height)
 	position: relative
@@ -174,3 +174,28 @@
 	height: $h
 	left: $l
 	top: $t
+
+=multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white)
+	overflow: hidden
+	position: relative
+	line-height: $lineHeight
+	max-height: $lineHeight * $lineCount 
+	text-align: justify
+	margin-right: -1em
+	padding-right: 1em
+	&:before 
+		content: '...'
+		position: absolute
+		right: 0
+		bottom: 0
+
+	&:after 
+		content: ''
+		position: absolute
+		right: 0
+		width: 1em
+		height: 1em
+		margin-top: 0.2em
+		background: $bgColor
+  
+	
