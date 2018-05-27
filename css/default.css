@@ -3099,6 +3099,39 @@ a:hover {
   background-repeat: no-repeat;
 }
 
+@-moz-keyframes telegram {
+  0% {
+    background-image: url("../images/icon/telegram.png");
+  }
+  50% {
+    background-image: url("../images/icon/telegram_blue.png");
+  }
+  0% {
+    background-image: url("../images/icon/telegram.png");
+  }
+}
+@-webkit-keyframes telegram {
+  0% {
+    background-image: url("../images/icon/telegram.png");
+  }
+  50% {
+    background-image: url("../images/icon/telegram_blue.png");
+  }
+  0% {
+    background-image: url("../images/icon/telegram.png");
+  }
+}
+@keyframes telegram {
+  0% {
+    background-image: url("../images/icon/telegram.png");
+  }
+  50% {
+    background-image: url("../images/icon/telegram_blue.png");
+  }
+  0% {
+    background-image: url("../images/icon/telegram.png");
+  }
+}
 .icon {
   display: inline-block;
   vertical-align: text-top;
@@ -3162,6 +3195,9 @@ a:hover {
   width: 47px;
   height: 47px;
   background-image: url("../images/icon/telegram.png");
+  -moz-animation: telegram 2s infinite;
+  -webkit-animation: telegram 2s infinite;
+  animation: telegram 2s infinite;
 }
 .icon.twitter {
   width: 53px;

@@ -2,6 +2,14 @@
 	+scale(0.7)
 	+transform-origin(0,0)
 
+
+@include keyframes(telegram) 
+	0% 
+		+bgi('icon/telegram.png')
+	50% 
+		+bgi('icon/telegram_blue.png')
+	0%
+		+bgi('icon/telegram.png')
 .icon
 	display: inline-block
 	vertical-align: text-top
@@ -30,6 +38,7 @@
 
 	&.telagram
 		+bg('icon/telegram.png')
+		+animation(telegram 2s infinite)
 	&.twitter
 		+bg('icon/twitter.png')
 	&.medium
