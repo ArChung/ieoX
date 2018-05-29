@@ -268,8 +268,9 @@ var simpleHide = simpleHide || {};
     function pageScrollAni(top) {
         var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
         $body.animate({
-            scrollTop: top
-        }, 300);
+            scrollTop: top,
+            
+        }, 1200);
     }
 
     function isPhone() {
