@@ -115,6 +115,7 @@ h2
 	overflow: hidden
 	+dTime(.3s)
 	position: relative
+	z-index: 1
 	&:before
 		position: absolute
 		width: 0
@@ -838,7 +839,7 @@ h2
 						.c_info
 							display: block
 				.c_title
-					+fm
+					+fs
 					font-weight: bold
 					width: 100%
 					position: relative
@@ -865,7 +866,7 @@ h2
 						top: 0
 						left: 2px
 					.c_info
-						+fs
+						+fss
 						display: inline-block
 						vertical-align: text-top
 						padding: 0px 5px
@@ -1183,7 +1184,25 @@ h2
 			top: 15px
 			right: 15px
 			cursor: pointer
-		
+.downloadPop
+	padding-top: 100px
+	.gridContainer
+		max-width: 550px
+		padding: 50px
+		min-height: 450px
+		.popPageTitle
+			text-align: center
+			h1 
+				font-weight: bold
+		.btnWrap
+			margin-top: 25px
+			a 
+				min-width: 50px
+				+fss
+				margin: 8px 2%
+				min-width: 45%
+				text-align: center
+					
 #qa					
 	.gridContainer
 		+bgi('indexbg.jpg')

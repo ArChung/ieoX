@@ -19,8 +19,23 @@ $(document).ready(function () {
 
   initSwipers();
 
+  $('.clozBtn').click(function (e) {
+    simpleHide($(this).closest('.popPage'));
+    ChungTool.unLockScroll();
+  })
 
+
+  initPopPage();
 })
+
+function initPopPage() {
+  $('.popBtn').click(function (e) {
+    e.preventDefault();
+    var popPage = $($(this).attr('href'));
+    simpleShow(popPage);
+    ChungTool.lockScroll();
+  })
+}
 
 function initSwipers() {
   // var newsSwiper = $('#newsSwipter');
@@ -118,10 +133,7 @@ function initQA() {
     ChungTool.lockScroll();
   })
 
-  qa.find('.clozBtn').click(function (e) {
-    simpleHide(qa);
-    ChungTool.unLockScroll();
-  })
+  
 
   qa.find('.qBox').click(function (e) {
     $(this).closest('.qaBox').toggleClass('open')

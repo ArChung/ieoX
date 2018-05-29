@@ -3329,7 +3329,7 @@ h2 {
   text-decoration: none;
 }
 .btn.grayBtn {
-  background-color: #8a8c90;
+  background-color: #6c6d6f;
   color: #fff;
 }
 .btn.bigBtn {
@@ -3354,6 +3354,7 @@ h2 {
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s;
   position: relative;
+  z-index: 1;
 }
 .borderBtn:before {
   position: absolute;
@@ -3369,11 +3370,11 @@ h2 {
   z-index: -1;
 }
 .borderBtn.grayBtn {
-  border: 1px solid #8a8c90;
+  border: 1px solid #6c6d6f;
   color: black;
 }
 .borderBtn.grayBtn:before {
-  background-color: #8a8c90;
+  background-color: #6c6d6f;
 }
 .borderBtn.grayBtn:hover {
   color: white;
@@ -3558,7 +3559,7 @@ h2 {
   -ms-transform: scale(0.5, 0.5);
   -webkit-transform: scale(0.5, 0.5);
   transform: scale(0.5, 0.5);
-  background-color: #8a8c90;
+  background-color: #6c6d6f;
   -moz-border-radius: 25px;
   -webkit-border-radius: 25px;
   border-radius: 25px;
@@ -4059,7 +4060,7 @@ h2 {
   left: 50%;
   width: 150px;
   height: 1px;
-  background-color: #8a8c90;
+  background-color: #6c6d6f;
   z-index: 0;
   -moz-transform: rotate(30deg);
   -ms-transform: rotate(30deg);
@@ -4343,8 +4344,9 @@ h2 {
   display: block;
 }
 #contact .gridContainer .contentWrap .contentBox .c_title {
-  font-size: 2.2rem;
-  letter-spacing: 0.3rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  line-height: 3.5rem;
   font-weight: bold;
   width: 100%;
   position: relative;
@@ -4358,7 +4360,7 @@ h2 {
   left: 0;
   width: calc(100%  + 5px);
   height: 2px;
-  background-color: #8a8c90;
+  background-color: #6c6d6f;
 }
 #contact .gridContainer .contentWrap .contentBox .c_Wrap {
   position: relative;
@@ -4370,18 +4372,21 @@ h2 {
   position: absolute;
   height: 100%;
   width: 1px;
-  background-color: #8a8c90;
+  background-color: #6c6d6f;
   top: 0;
   left: 2px;
 }
 #contact .gridContainer .contentWrap .contentBox .c_Wrap .c_info {
-  font-size: 1.6rem;
-  letter-spacing: 0.1rem;
-  line-height: 3.5rem;
+  font-size: 1.2rem;
   display: inline-block;
   vertical-align: text-top;
   padding: 0px 5px;
   min-width: 120px;
+}
+@media screen and (max-width: 768px) {
+  #contact .gridContainer .contentWrap .contentBox .c_Wrap .c_info {
+    font-size: 1.6rem;
+  }
 }
 #contact .gridContainer .contentWrap .contentBox .c_Wrap .c_info:hover {
   text-decoration: underline;
@@ -4575,7 +4580,7 @@ h2 {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  background-color: #8a8c90;
+  background-color: #6c6d6f;
   position: absolute;
   top: 0;
   left: 0;
@@ -4742,7 +4747,7 @@ h2 {
   -webkit-border-radius: 15px;
   border-radius: 15px;
   position: relative;
-  border: 1px solid #8a8c90;
+  border: 1px solid #6c6d6f;
 }
 .popPage .gridContainer .clozBtn {
   width: 60px;
@@ -4752,6 +4757,36 @@ h2 {
   top: 15px;
   right: 15px;
   cursor: pointer;
+}
+
+.downloadPop {
+  padding-top: 100px;
+}
+.downloadPop .gridContainer {
+  max-width: 550px;
+  padding: 50px;
+  min-height: 450px;
+}
+.downloadPop .gridContainer .popPageTitle {
+  text-align: center;
+}
+.downloadPop .gridContainer .popPageTitle h1 {
+  font-weight: bold;
+}
+.downloadPop .gridContainer .btnWrap {
+  margin-top: 25px;
+}
+.downloadPop .gridContainer .btnWrap a {
+  min-width: 50px;
+  font-size: 1.2rem;
+  margin: 8px 2%;
+  min-width: 45%;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .downloadPop .gridContainer .btnWrap a {
+    font-size: 1.6rem;
+  }
 }
 
 #qa .gridContainer {
