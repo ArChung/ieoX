@@ -4897,11 +4897,6 @@ h2 {
   transform: translateY(-50%);
   z-index: 5;
 }
-@media screen and (max-width: 768px) {
-  #socialWrap {
-    display: none;
-  }
-}
 #socialWrap * + * {
   margin-top: 10px;
 }
