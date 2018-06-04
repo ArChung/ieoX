@@ -3257,12 +3257,10 @@ a:hover {
 
 h1 {
   font-size: 3rem;
-  letter-spacing: 0.4rem;
 }
 
 h2 {
   font-size: 1.6rem;
-  letter-spacing: 0.1rem;
   line-height: 3.5rem;
 }
 
@@ -3335,7 +3333,6 @@ h2 {
 .btn.bigBtn {
   padding: 0 4em;
   font-size: 2.2rem;
-  letter-spacing: 0.3rem;
   letter-spacing: 0.4em;
 }
 
@@ -3510,7 +3507,6 @@ h2 {
     display: block;
     text-align: center;
     font-size: 3rem;
-    letter-spacing: 0.4rem;
   }
   .header .mainMenu .btnWrap .menuBtn:not(:last-child) {
     margin-bottom: 20px;
@@ -3525,7 +3521,6 @@ h2 {
   }
   .header .mainMenu .btnWrap .selectWrap select {
     font-size: 3rem;
-    letter-spacing: 0.4rem;
   }
   .header .mainMenu .btnWrap .selectWrap select option {
     font-size: 14px;
@@ -3660,7 +3655,6 @@ h2 {
   margin-top: 100px;
   text-align: center;
   font-size: 1.6rem;
-  letter-spacing: 0.1rem;
   line-height: 3.5rem;
 }
 #index .gridContainer .btnWrap .borderBtn {
@@ -3687,7 +3681,6 @@ h2 {
 #score .gridContainer .pageTitle {
   text-align: center;
   font-size: 3rem;
-  letter-spacing: 0.4rem;
   margin-bottom: 50px;
 }
 #score .gridContainer .scoreWrap {
@@ -3711,7 +3704,6 @@ h2 {
 }
 #reward .gridContainer .pageTitle {
   font-size: 3rem;
-  letter-spacing: 0.4rem;
   text-align: center;
 }
 #reward .gridContainer .content {
@@ -3914,7 +3906,6 @@ h2 {
   top: auto;
   bottom: -2em;
   font-size: 1.6rem;
-  letter-spacing: 0.1rem;
   line-height: 3.5rem;
   right: -68px;
   color: #b9b9b9;
@@ -3993,7 +3984,6 @@ h2 {
 }
 #planning .gridContainer .content .pageTitle {
   font-size: 3rem;
-  letter-spacing: 0.4rem;
   text-align: center;
 }
 #planning .gridContainer .content .plenWrap {
@@ -4156,12 +4146,10 @@ h2 {
 #team .gridContainer .content .pageTitle {
   text-align: center;
   font-size: 3rem;
-  letter-spacing: 0.4rem;
   margin-bottom: 50px;
 }
 #team .gridContainer .content .teamWrap .category {
   font-size: 2.2rem;
-  letter-spacing: 0.3rem;
   position: relative;
   margin-bottom: 50px;
 }
@@ -4263,7 +4251,6 @@ h2 {
   display: inline-block;
   vertical-align: text-top;
   font-size: 2.2rem;
-  letter-spacing: 0.3rem;
   letter-spacing: normal;
 }
 #team .gridContainer .content .teamWrap .memberWrap .memberBox .m_info .m_nameBox .icon {
@@ -4291,7 +4278,6 @@ h2 {
 #vendor .gridContainer .pageTitle {
   text-align: center;
   font-size: 3rem;
-  letter-spacing: 0.4rem;
   margin-bottom: 50px;
 }
 #vendor .gridContainer .vendorWrap {
@@ -4345,7 +4331,6 @@ h2 {
 }
 #contact .gridContainer .contentWrap .contentBox .c_title {
   font-size: 1.6rem;
-  letter-spacing: 0.1rem;
   line-height: 3.5rem;
   font-weight: bold;
   width: 100%;
@@ -4400,7 +4385,6 @@ h2 {
 
 #chart .gridContainer .stepContainer .pageTitle {
   font-size: 3rem;
-  letter-spacing: 0.4rem;
   text-align: center;
 }
 #chart .gridContainer .stepContainer .stepWrap {
@@ -4450,12 +4434,10 @@ h2 {
 }
 #chart .gridContainer .stepContainer .stepWrap .stepBox .stepDate .stepTxt {
   font-size: 2.2rem;
-  letter-spacing: 0.3rem;
   letter-spacing: auto;
 }
 #chart .gridContainer .stepContainer .stepWrap .stepBox .stepDate .stepTxt .numTxt {
   font-size: 3rem;
-  letter-spacing: 0.4rem;
 }
 #chart .gridContainer .stepContainer .stepWrap .stepBox .dateTxt {
   font-size: 1.2rem;
@@ -4468,7 +4450,6 @@ h2 {
 }
 #chart .gridContainer .stepContainer .stepWrap .stepBox h1 {
   font-size: 2.2rem;
-  letter-spacing: 0.3rem;
   margin-top: 15px;
 }
 #chart .gridContainer .stepContainer .stepWrap .stepBox h2 {
@@ -4536,7 +4517,6 @@ h2 {
 }
 #chart .gridContainer .chartContainer .chartWrap .chartTitle {
   font-size: 3rem;
-  letter-spacing: 0.4rem;
   text-align: center;
 }
 #chart .gridContainer .chartContainer .chartWrap .chartBox {
@@ -4605,13 +4585,11 @@ h2 {
 }
 #chart .gridContainer .chartContainer .chartWrap .chartBox .chatDataWrap .chartData .txtBox .rate {
   font-size: 2.2rem;
-  letter-spacing: 0.3rem;
   letter-spacing: normal;
 }
 #chart .gridContainer .chartContainer .chartWrap .chartBox .chatDataWrap .chartData .txtBox .rate:after {
   content: "%";
   font-size: 1.6rem;
-  letter-spacing: 0.1rem;
   line-height: 3.5rem;
 }
 #chart .gridContainer .chartContainer .chartWrap .chartBox .chatDataWrap .chartData.c1:after {
@@ -4691,7 +4669,7 @@ h2 {
 }
 .chartBox.cb1 .chatDataWrap .c5 .txtBox {
   right: 22px;
-  top: -45px;
+  top: -65px;
 }
 .chartBox.cb1 .chatDataWrap .c6 .txtBox {
   right: 6px;
@@ -4726,7 +4704,7 @@ h2 {
   top: -10px;
 }
 .chartBox.cb2 .chatDataWrap .c4 .txtBox {
-  right: 6px;
+  right: 26px;
   top: -60px;
 }
 
@@ -4796,13 +4774,11 @@ h2 {
 }
 #qa .gridContainer .content .pageTitle {
   font-size: 3rem;
-  letter-spacing: 0.4rem;
   text-align: center;
   margin-bottom: 50px;
 }
 #qa .gridContainer .content .qaBox .qBox {
   font-size: 1.6rem;
-  letter-spacing: 0.1rem;
   line-height: 3.5rem;
   line-height: inherit;
   position: relative;
@@ -4838,7 +4814,6 @@ h2 {
 }
 #qa .gridContainer .content .qaBox .aBox {
   font-size: 1.6rem;
-  letter-spacing: 0.1rem;
   line-height: 3.5rem;
   line-height: inherit;
   padding: 0 50px 0 15px;
@@ -4920,13 +4895,11 @@ h2 {
 
 #news .gridContainer .pageTitle {
   font-size: 3rem;
-  letter-spacing: 0.4rem;
   text-align: center;
 }
 
 #events .gridContainer .pageTitle {
   font-size: 3rem;
-  letter-spacing: 0.4rem;
   text-align: center;
 }
 
@@ -5021,7 +4994,6 @@ h2 {
 }
 .swiper-box .swiper-container .swiper-wrapper .swiper-slide .txtBox h1 {
   font-size: 1.6rem;
-  letter-spacing: 0.1rem;
   line-height: 3.5rem;
   line-height: inherit;
   letter-spacing: normal;
