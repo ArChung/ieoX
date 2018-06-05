@@ -3451,7 +3451,7 @@ h2 {
   width: 16px;
   height: 17px;
   background-image: url("../images/icon/earth.png");
-  top: 9px;
+  top: 10px;
   left: 8px;
   position: absolute;
 }
@@ -3571,7 +3571,7 @@ h2 {
   font-weight: bold;
 }
 .header .mainMenu .menuBtn .icon {
-  margin-top: 0px;
+  margin-top: 3px;
   margin-right: 2px;
 }
 
