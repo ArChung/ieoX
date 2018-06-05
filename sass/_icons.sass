@@ -2,6 +2,19 @@
 	+scale(0.7)
 	+transform-origin(0,0)
 
+@keyframes shake 
+	5%, 15% ,25%
+		+rotateY(0deg)
+	10%, 20% 
+		+rotateY(180deg)
+	
+  
+// .shake
+//	 +animation(shake 1.6s cubic-bezier(.36,.07,.19,.97) both infinite)
+    // +transform(translate3d(0, 0, 0))
+    // backface-visibility: hidden
+    // perspective: 1000px
+
 
 @include keyframes(telegram) 
 	0% 
@@ -37,8 +50,9 @@
 		+bg('icon/mail.png') 
 
 	&.telagram
-		+bg('icon/telegram.png')
-		+animation(telegram 2s infinite)
+		+bg('icon/telegram_blue.png')
+		+animation(shake 6s cubic-bezier(.36,.07,.19,.97) both infinite)
+		// +animation(telegram 2s infinite)
 	&.twitter
 		+bg('icon/twitter.png')
 	&.medium
