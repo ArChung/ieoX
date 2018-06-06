@@ -336,7 +336,7 @@ function initChart() {
 
       var point = chartBox.find('.chatDataWrap .chartData').eq(data.index);
       var num = +point.find('.rate').html();
-      console.log('num: ', num);
+      // console.log('num: ', num);
       point.css('top', data.y);
       point.css('left', data.x);
 
