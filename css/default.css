@@ -4997,7 +4997,20 @@ h2 {
   -webkit-background-size: cover;
   background-size: cover;
   background-position: 50% 50%;
-  height: 250px;
+  position: relative;
+}
+.swiper-box .swiper-container .swiper-wrapper .swiper-slide .picBox:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 75%;
+}
+.swiper-box .swiper-container .swiper-wrapper .swiper-slide .picBox > .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .swiper-box .swiper-container .swiper-wrapper .swiper-slide .txtBox {
   width: 100%;
