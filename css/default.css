@@ -3448,17 +3448,11 @@ h2 {
   top: 10px;
   left: 30px;
 }
-.header .mainMenu {
-  position: absolute;
-  right: 0;
-  top: 25px;
-  display: inline-block;
-}
-.header .mainMenu .selectWrap {
+.header .selectWrap {
   position: relative;
   width: auto;
 }
-.header .mainMenu .selectWrap:before {
+.header .selectWrap:before {
   content: "";
   width: 16px;
   height: 17px;
@@ -3467,8 +3461,36 @@ h2 {
   left: 8px;
   position: absolute;
 }
-.header .mainMenu .selectWrap select {
+.header .selectWrap select {
   padding: 0 30px;
+}
+@media screen and (max-width: 1199px) {
+  .header .selectWrap {
+    margin-top: 0;
+    height: 4em;
+    line-height: 4;
+  }
+  .header .selectWrap:before {
+    display: none;
+  }
+  .header .selectWrap select {
+    font-size: 2.2rem;
+  }
+  .header .selectWrap select option {
+    font-size: 14px;
+  }
+}
+.header > .selectWrap {
+  width: 200px;
+  position: absolute;
+  top: 20px;
+  right: 100px;
+}
+.header .mainMenu {
+  position: absolute;
+  right: 0;
+  top: 25px;
+  display: inline-block;
 }
 @media screen and (max-width: 1199px) {
   .header .mainMenu {
@@ -3522,20 +3544,6 @@ h2 {
   }
   .header .mainMenu .btnWrap .menuBtn:not(:last-child) {
     margin-bottom: 20px;
-  }
-  .header .mainMenu .btnWrap .selectWrap {
-    margin-top: 0;
-    height: 4em;
-    line-height: 4;
-  }
-  .header .mainMenu .btnWrap .selectWrap:before {
-    display: none;
-  }
-  .header .mainMenu .btnWrap .selectWrap select {
-    font-size: 2.2rem;
-  }
-  .header .mainMenu .btnWrap .selectWrap select option {
-    font-size: 14px;
   }
 }
 .header .mainMenu .menuBtn {

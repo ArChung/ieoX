@@ -188,24 +188,42 @@ h2
 		position: absolute
 		top: 10px
 		left: 30px
+	
+	.selectWrap
+		position: relative
+		width: auto
+		&:before 
+			content: ''
+			+bg('icon/earth.png')
+			top: 10px
+			left: 8px
+			position: absolute
+		select
+			padding: 0 30px
 
-		
+		+pad2 
+			
+			margin-top: 0
+			height: 4em
+			line-height: 4
+			
+			&:before 
+				display: none
+			select 
+				+fm
+				option
+					font-size: 14px
+	>.selectWrap
+		width: 200px
+		position: absolute
+		top: 20px
+		right: 100px
 	.mainMenu
 		position: absolute
 		right: 0
 		top: 25px
 		display: inline-block
-		.selectWrap
-			position: relative
-			width: auto
-			&:before 
-				content: ''
-				+bg('icon/earth.png')
-				top: 10px
-				left: 8px
-				position: absolute
-			select
-				padding: 0 30px
+		
 				
 		+pad2
 			position: fixed
@@ -236,17 +254,7 @@ h2
 					+fm
 					&:not(:last-child)
 						margin-bottom: 20px
-				.selectWrap
-					margin-top: 0
-					height: 4em
-					line-height: 4
-					
-					&:before 
-						display: none
-					select 
-						+fm
-						option
-							font-size: 14px
+			
 						
 
 		.menuBtn
