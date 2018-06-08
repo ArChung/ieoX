@@ -203,6 +203,10 @@ function initParticleBg() {
     .on('enter', function (e) {
       var t = $(e);
       var index = $(selector).index(t);
+      if(ChungTool.isPhone()&&index===2){
+        return;
+      }
+
       if (!psnArr[index]) {
         particlesJS.load(selectorArr[index], aniConfigArr[index]);
         psnArr[index] = count;
@@ -214,8 +218,9 @@ function initParticleBg() {
     .on('exit', function (e) {
       var t = $(e);
       var index = $(selector).index(t);
-      clearAnimation(psnArr[index])
-
+      if(psnArr[index]){
+        clearAnimation(psnArr[index]);
+      }
     });
 
 
