@@ -3453,12 +3453,9 @@ h2 {
   width: auto;
 }
 .header .selectWrap:before {
-  content: "";
-  width: 16px;
-  height: 17px;
-  background-image: url("../images/icon/earth.png");
-  top: 10px;
-  left: 8px;
+  top: -5px;
+  left: 7px;
+  font-size: 16px;
   position: absolute;
 }
 .header .selectWrap select {
