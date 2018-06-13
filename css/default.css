@@ -3609,7 +3609,7 @@ h2 {
 }
 
 #index {
-  height: 100%;
+  min-height: 100%;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
