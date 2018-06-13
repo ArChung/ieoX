@@ -1317,27 +1317,41 @@ h2
 	&:hover 
 		right: -5px
 		+dTime(.1s)
-		
+@keyframes coin 
+	5%, 15% ,25%
+		+rotateY(0deg)
+	10%, 20% 
+		+rotateY(180deg)	
 #socialWrap
 	// +phone 
 		// display: none
 	position: fixed
-	right: 0px
+	right: 10px
 	top: 50%
 	+transform(translateY(-50%))
 	z-index: 5
+	font-size: 35px
 	* + *
 		margin-top: 10px
 	a 
 		display: block
-		+transition(scale,0.2s)
-		+scale(0.7)
+
+		// +transition(scale,0.2s)
+		// +scale(0.7)
 		margin-left: auto
 		margin-right: auto
+		text-align: center
+		+opacity(.7)
+		+dTime(.1s)
 		&:hover 
-			+scale(1)
-		&.telagram
-			+scale(.8)
+			+scale(1.1)
+			+opacity(1)
+			color: #007bb5
+		&.fa-telegram
+			color: #007bb5
+			+opacity(1)
+			+animation(coin 6s cubic-bezier(.36,.07,.19,.97) both infinite)
+			
 			
 #news
 	.gridContainer
