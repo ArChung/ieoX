@@ -203,7 +203,7 @@ function initParticleBg() {
     .on('enter', function (e) {
       var t = $(e);
       var index = $(selector).index(t);
-      if(ChungTool.isPhone()&&index===2){
+      if(index===2){
         return;
       }
 
