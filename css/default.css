@@ -3256,6 +3256,11 @@ html, body {
   font-family: "微軟正黑體", "Microsoft JhengHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.dotList {
+  padding-left: 1.5em;
+  list-style-type: disc;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -3783,6 +3788,10 @@ h2 {
   transform: translateY(-50%);
   right: 0;
 }
+#misson .gridContainer .content .pageTitle ul {
+  font-size: 1.6rem;
+  line-height: 3.5rem;
+}
 @media screen and (max-width: 1199px) {
   #misson .gridContainer .content {
     padding-right: 0;
@@ -3956,6 +3965,10 @@ h2 {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
     opacity: 0.5;
   }
+}
+#feature .gridContainer .pageTitle ul {
+  font-size: 1.6rem;
+  line-height: 3.5rem;
 }
 #feature .gridContainer .featureWrap {
   display: flex;

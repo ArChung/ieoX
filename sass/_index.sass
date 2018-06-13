@@ -8,7 +8,9 @@ html,body
 	font-family: "微軟正黑體","Microsoft JhengHei","Helvetica Neue",Helvetica,Arial,sans-serif
 
 	
-
+.dotList
+	padding-left: 1.5em
+	list-style-type: disc
 	
 *
 	box-sizing: border-box
@@ -415,7 +417,9 @@ h2
 					top: 50%
 					+transform(translateY(-50%))
 					right: 0
-					
+			.pageTitle
+				ul 
+					+fs
 			+pad2
 				padding-right: 0
 				.picWrap
@@ -532,7 +536,9 @@ h2
 				padding-left: 0
 				.pic 
 					+opacity(0.5)
-					
+		.pageTitle
+			ul 
+				+fs	
 		.featureWrap
 			display: flex
 			flex-wrap: wrap
