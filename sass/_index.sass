@@ -836,7 +836,32 @@ h2
 					height: 0
 					visibility: hidden
 
-					
+#partner
+	.gridContainer			
+		.pageTitle
+			text-align: center
+			+fb
+			margin-bottom: 50px								
+		.vendorWrap
+			display: flex
+			justify-content: space-around
+			flex-wrap: wrap
+			.vendorBox
+				width: 270px
+				height: 170px
+				padding: 15px
+				display: inline-flex
+				justify-content: center
+				align-items: center
+				vertical-align: text-top
+				
+				+phone 
+					width: 240px
+				&.placeHolder
+					height: 0
+					visibility: hidden
+
+						
 #contact
 	.gridContainer
 		min-height: auto

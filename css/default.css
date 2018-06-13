@@ -4324,6 +4324,35 @@ h2 {
   visibility: hidden;
 }
 
+#partner .gridContainer .pageTitle {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+#partner .gridContainer .vendorWrap {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#partner .gridContainer .vendorWrap .vendorBox {
+  width: 270px;
+  height: 170px;
+  padding: 15px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: text-top;
+}
+@media screen and (max-width: 768px) {
+  #partner .gridContainer .vendorWrap .vendorBox {
+    width: 240px;
+  }
+}
+#partner .gridContainer .vendorWrap .vendorBox.placeHolder {
+  height: 0;
+  visibility: hidden;
+}
+
 #contact .gridContainer {
   min-height: auto;
   padding: 50px 25px;
