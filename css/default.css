@@ -3217,8 +3217,8 @@ a:hover {
   background-image: url("../images/icon/twitter.png");
 }
 .icon.medium {
-  width: 50px;
-  height: 43px;
+  width: 55px;
+  height: 55px;
   background-image: url("../images/icon/medium.png");
 }
 .icon.reddit {
@@ -4934,6 +4934,8 @@ h2 {
   -ms-transform: scale(0.7, 0.7);
   -webkit-transform: scale(0.7, 0.7);
   transform: scale(0.7, 0.7);
+  margin-left: auto;
+  margin-right: auto;
 }
 #socialWrap a:hover {
   -moz-transform: scale(1, 1);
