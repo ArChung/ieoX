@@ -790,16 +790,21 @@ h2
 								left: 0
 								width: 150px
 								line-height: 2.5rem
+								+fm
 								.m_name
-									display: inline-block
-									vertical-align: text-top  
-									+fm
+									// display: inline-block
+									// vertical-align: text-top  
+									
 									letter-spacing: normal
 								.icon
 									vertical-align: text-top 
 									margin-top: 3px
 									margin-left: 4px
-								
+									font-size: 16px
+								.fa-linkedin
+									color: #007bb5
+									&:hover 
+										color: darken(#007bb5,10%)
 						.m_intro
 							margin-top: 15px
 							line-height: inherit
