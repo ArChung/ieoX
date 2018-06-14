@@ -4980,6 +4980,7 @@ h2 {
   -moz-animation: coin 6s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
   -webkit-animation: coin 6s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
   animation: coin 6s cubic-bezier(0.36, 0.07, 0.19, 0.97) both infinite;
+  font-size: 45px;
 }
 
 #news .gridContainer .pageTitle {
