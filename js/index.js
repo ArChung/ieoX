@@ -234,9 +234,23 @@ function initParticleBg() {
 
 
 function initChart() {
-  var data1 = [55, 10, 15, 3, 10, 2, 5];
-  var data2 = [40, 15, 30, 15];
+
+  // var arr = $('#coinPlaning .cb1 .rate').map((index,el)=> {
+  //   return +$(el).text()
+  // }).get();
+
+
+
+  var data1 =  $('#coinPlaning .cb1 .rate').map((index,el)=> {
+    return +$(el).text()
+  }).get();
+  var data2 = $('#coinPlaning .cb2 .rate').map((index,el)=> {
+    return +$(el).text()
+  }).get();;
+
+
   TweenMax.set('.chatDataWrap .chartData',{autoAlpha:0})
+  
   inView('#chart01').once('enter',function(){
     var chart = new Chartist.Pie('#chart01', {
       series: data1,
@@ -274,7 +288,7 @@ function initChart() {
     });
 
     chart2.on('created', function(){
-      chart.detach(); // it will detach resize and media query listeners
+      chart2.detach(); // it will detach resize and media query listeners
     });
   
     //then update the chart only when window.width() changes

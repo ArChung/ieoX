@@ -4656,25 +4656,16 @@ h2 {
   font-size: 1.6rem;
   line-height: 3.5rem;
 }
-#chart .gridContainer .chartContainer .chartWrap .chartBox .chatDataWrap .chartData.c1:after {
+#chart .gridContainer .chartContainer .chartWrap .chartBox .chatDataWrap .chartData:nth-child(4n+1):after {
   background-color: #7e7e7e;
 }
-#chart .gridContainer .chartContainer .chartWrap .chartBox .chatDataWrap .chartData.c2:after {
+#chart .gridContainer .chartContainer .chartWrap .chartBox .chatDataWrap .chartData:nth-child(4n+2):after {
   background-color: #a3a3a3;
 }
-#chart .gridContainer .chartContainer .chartWrap .chartBox .chatDataWrap .chartData.c3:after {
+#chart .gridContainer .chartContainer .chartWrap .chartBox .chatDataWrap .chartData:nth-child(4n+4):after {
   background-color: #626262;
 }
-#chart .gridContainer .chartContainer .chartWrap .chartBox .chatDataWrap .chartData.c4:after {
-  background-color: #d2d2d2;
-}
-#chart .gridContainer .chartContainer .chartWrap .chartBox .chatDataWrap .chartData.c5:after {
-  background-color: #626262;
-}
-#chart .gridContainer .chartContainer .chartWrap .chartBox .chatDataWrap .chartData.c6:after {
-  background-color: #808080;
-}
-#chart .gridContainer .chartContainer .chartWrap .chartBox .chatDataWrap .chartData.c7:after {
+#chart .gridContainer .chartContainer .chartWrap .chartBox .chatDataWrap .chartData:nth-child(4n):after {
   background-color: #d2d2d2;
 }
 
@@ -4694,18 +4685,27 @@ h2 {
   stroke: #d2d2d2;
 }
 .chartBox .chart .ct-series-e .ct-slice-donut {
-  stroke: #626262;
+  stroke: #7e7e7e;
 }
 .chartBox .chart .ct-series-f .ct-slice-donut {
-  stroke: #808080;
+  stroke: #a3a3a3;
 }
 .chartBox .chart .ct-series-g .ct-slice-donut {
-  stroke: #d2d2d2;
+  stroke: #626262;
 }
 .chartBox .chart .ct-series-h .ct-slice-donut {
-  stroke: #808080;
+  stroke: #d2d2d2;
 }
 .chartBox .chart .ct-series-i .ct-slice-donut {
+  stroke: #7e7e7e;
+}
+.chartBox .chart .ct-series-j .ct-slice-donut {
+  stroke: #a3a3a3;
+}
+.chartBox .chart .ct-series-k .ct-slice-donut {
+  stroke: #626262;
+}
+.chartBox .chart .ct-series-l .ct-slice-donut {
   stroke: #d2d2d2;
 }
 .chartBox.cb1 .chatDataWrap .chartData .txtBox {
