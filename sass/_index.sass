@@ -1283,6 +1283,7 @@ h2
 					padding: 15px 50px 15px 15px
 					margin-top: 30px
 					letter-spacing: normal
+					font-weight: bold
 					&:after 
 						background-color: lightgray
 						width: 100%
@@ -1301,18 +1302,19 @@ h2
 						+rotate(180deg)
 					
 				.aBox
-					+fs
+					+fss
 					line-height: inherit
 					padding: 0 50px 0 15px
-					font-weight: bold
+					// font-weight: bold
 					max-height: 0
 					overflow: hidden
 					+dTime(0.6s)
 					letter-spacing: normal
+					text-align: justify
 				&.open
 					.aBox 
 						padding: 15px 50px 15px 15px
-						max-height: 350px
+						max-height: 800px
 					.qBox 
 						.openBtn
 							+rotate(0deg)
