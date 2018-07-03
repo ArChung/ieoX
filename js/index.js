@@ -239,8 +239,7 @@ function initChart() {
   //   return +$(el).text()
   // }).get();
 
-
-
+  var count1 = 0 ;
   var data1 =  $('#coinPlaning .cb1 .rate').map((index,el)=> {
     return +$(el).text()
   }).get();
@@ -257,7 +256,9 @@ function initChart() {
     }, {
       donut: true,
     });
-
+  
+      
+    
     chart.on('draw', function (data) {
       drawFunc(data, $('#chart .cb1'))
     });
@@ -303,6 +304,7 @@ function initChart() {
 
 
   function drawFunc(data, chartBox) {
+    
     var durring = .6;
     if (data.type === 'slice') {
       var pathLength = data.element._node.getTotalLength();
@@ -351,15 +353,48 @@ function initChart() {
         },
       }, false);
 
-
+      if(data.index===0){
+        count1=0;
+        // TweenMax.killAll();
+      }
 
       var point = chartBox.find('.chatDataWrap .chartData').eq(data.index);
+      var txt = point.find('.txtBox');
       var num = +point.find('.rate').html();
+      count1+=num/2;
+      // if(count1/25<1){
+      //   txt.css({'text-align':'left','left':'15px','bottom':'15px'});
+      // }else if(count1/25<2){
+      //   txt.css({'text-align':'left','left':'15px'});
+      // }else if(count1/25<3){
+      //   txt.css({'text-align':'right','right':'15px'});
+      // }else{
+      //   txt.css({'text-align':'right','right':'15px','bottom':'15px'});
+      // }
+// console.log(count1)
+      var angleX = 20*Math.sin(count1*3.6* Math.PI / 180)
+      var angleY = 20*Math.cos(count1*3.6* Math.PI / 180)
+      
+      if(angleX> 0 ){
+        txt.css({'text-align':'left','left':angleX + 'px'});
+      }else{
+        txt.css({'text-align':'right','right':-angleX + 'px'});
+      }
+      if(angleY> 0 ){
+        txt.css({'bottom':angleY + 'px'}); 
+      }else{
+        txt.css({'top': -angleY + 'px'});
+      }
+
+
+
+      count1+=num/2;
+      // console.log(count1/25)
       // console.log('num: ', num);
       point.css('top', data.y);
       point.css('left', data.x);
 
-
+      // console.log(count);
       if (num > 30) {
         point.addClass('dot_big');
       } else if (num > 10 && num <= 30) {
@@ -373,10 +408,10 @@ function initChart() {
       TweenMax.fromTo(point,time1,{autoAlpha:0},{autoAlpha:1,delay:time2})
       TweenMax.from(point.find('.txtBox'),time1,{marginTop:10,delay:time2});
       var game = {score:0}
-      TweenLite.to(game, time1, {score:num, delay:time2,roundProps:"score", onUpdate:updateHandler});
-      function updateHandler() {
-        point.find('.rate').html(game.score);
-      }
+      // TweenLite.to(game, time1, {score:num, delay:time2,roundProps:"score", onUpdate:updateHandler});
+      // function updateHandler() {
+      //   point.find('.rate').html(game.score);
+      // }
     }
   }
 

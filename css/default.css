@@ -4579,6 +4579,19 @@ h2 {
   width: 100%;
   margin-top: 50px;
 }
+#chart .gridContainer .chartContainer .otherBox {
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 768px) {
+  #chart .gridContainer .chartContainer .otherBox {
+    font-size: 1.6rem;
+  }
+}
+#chart .gridContainer .chartContainer .otherBox ul {
+  list-style-type: disc;
+  padding-left: 25px;
+}
 #chart .gridContainer .chartContainer .chartWrap .chartTitle {
   font-size: 3rem;
   text-align: center;
@@ -4707,69 +4720,6 @@ h2 {
 }
 .chartBox .chart .ct-series-l .ct-slice-donut {
   stroke: #d2d2d2;
-}
-.chartBox.cb1 .chatDataWrap .chartData .txtBox {
-  text-align: right;
-  right: 0;
-  top: 0;
-}
-.chartBox.cb1 .chatDataWrap .c1 .txtBox {
-  left: 20px;
-  top: -20px;
-  text-align: left;
-  right: auto;
-}
-.chartBox.cb1 .chatDataWrap .c2 .txtBox {
-  right: 22px;
-  top: -10px;
-}
-.chartBox.cb1 .chatDataWrap .c3 .txtBox {
-  right: 22px;
-  top: -10px;
-}
-.chartBox.cb1 .chatDataWrap .c4 .txtBox {
-  right: 22px;
-  top: -10px;
-}
-.chartBox.cb1 .chatDataWrap .c5 .txtBox {
-  right: 22px;
-  top: -65px;
-}
-.chartBox.cb1 .chatDataWrap .c6 .txtBox {
-  right: 6px;
-  top: -90px;
-}
-.chartBox.cb1 .chatDataWrap .c7 .txtBox {
-  top: auto;
-  bottom: 30px;
-  right: auto;
-  left: 0;
-  text-align: left;
-}
-.chartBox.cb2 .chatDataWrap .chartData .txtBox {
-  text-align: right;
-  right: 0;
-  top: 0;
-}
-.chartBox.cb2 .chatDataWrap .c1 .txtBox {
-  left: 20px;
-  top: -20px;
-  text-align: left;
-  right: auto;
-}
-.chartBox.cb2 .chatDataWrap .c2 .txtBox {
-  right: auto;
-  text-align: left;
-  top: 20px;
-  left: 0;
-}
-.chartBox.cb2 .chatDataWrap .c3 .txtBox {
-  right: 22px;
-  top: -10px;
-}
-.chartBox.cb2 .chatDataWrap .c4 .txtBox {
-  right: 26px;
-  top: -90px;
 }
 
 .popPage {
