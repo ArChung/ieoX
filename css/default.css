@@ -4580,8 +4580,9 @@ h2 {
   margin-top: 50px;
 }
 #chart .gridContainer .chartContainer .otherBox {
+  max-width: 600px;
   font-size: 1.2rem;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 @media screen and (max-width: 768px) {
   #chart .gridContainer .chartContainer .otherBox {
