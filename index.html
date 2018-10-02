@@ -19,18 +19,25 @@
     <!-- OG -->
     <meta property="og:title" content="ioeX" />
     <meta property="og:site_name" content="ioeX" />
-    <meta property="og:description" content="ioeX透過眾多的點對點直連設備形成一套網路組合傳輸與存儲機制，讓晶片廠、設備商、軟體公司或解決方案商，彼此能進行資料檔案傳輸交換，不需透過資料存儲與傳輸中心。智能設備可經由加入組網，讓設備軟體在線更新等流量與存儲成本大幅降低；一般用戶可透過使用具備ioeX組網功能的智能設備或軟件的同時，獲得因分享頻寬與儲存空間而獎勵的ioeX幣。"
+    <meta property="og:description" content="ioeX透過眾多的點對點直連設備形成一套網路組合傳輸與存儲機制，讓晶片廠、設備商、軟體公司或解決方案商，彼此能進行資料檔案傳輸交換，不需透過資料存儲與傳輸中心。智能設備可經由加入組網，讓設備軟體在線更新等流量與存儲成本大幅降低；一般用戶可透過使用具備ioeX組網功能的智能設備或軟件的同時，獲得因分享頻寬與儲存空間而獎勵的ioeX幣。" 
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://www.ioex.co/images/logoShare.png" />
     <meta property="og:url" content="https://www.ioex.co/" />
     <link rel="icon" href="images/favicon.ico">
+    <!-- bootstraps 4.1.3 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
     <!-- css start-->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="css/flipclock.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/default2.css">
     <!-- js start-->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
@@ -85,6 +92,21 @@
                         </select>
                     </div>
                 </div>
+            </div>
+            <div class="navbar position-absolute d-flex justify-content-end" style='top: 100px;width: 100%;'>
+                <span class="badge badge-secondary badge-danger mr-2">今日幣價</span>
+                <span class="mx-1">
+                    <img src="images/icon/bitcoin_32x32.png" class='mr-1 align-text-top d-inline-block' alt="">
+                    <span class='flip-number'>1235.4</span>
+                </span>
+                <span class="mx-1">
+                    <img src="images/icon/ETHEREUM_32x32.png" class='mr-1 align-text-top d-inline-block' alt="">
+                    <span class='flip-number'>12335.4</span>
+                </span>
+                <span class="mx-1">
+                    <img src="images/icon/elastos_32x32.png" class='mr-1 align-text-top d-inline-block' alt="">
+                    <span class='flip-number'>1235.4</span>
+                </span>
             </div>
         </div>
         <div id="socialWrap">
@@ -215,7 +237,7 @@
                 </div>
                 <div class="videoWrap">
                     <div class="video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/afx1JwMmI2Y?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media"
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/afx1JwMmI2Y?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" 
                             allowfullscreen></iframe>
                     </div>
                     <!-- <div class="video">
@@ -1043,7 +1065,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="chartContainer" id='coinPlaning'>
                     <div class="chartWrap">
                         <div class="chartTitle">代幣分配規劃</div>
@@ -1098,7 +1120,7 @@
                                 <li>作為宣傳、顧問等費用 3％</li>
                                 <li>銷售推廣獎勵措施 2％</li>
                             </ul>
-                            
+
                         </div>
                         <div class="otherBox">
                             <h3>*組網功能與生態建構</h3>

@@ -26,7 +26,28 @@ $(document).ready(function () {
 
 
   initPopPage();
+
+  initFlipNumber();
 })
+
+function initFlipNumber() {
+
+  $('.flip-number').each(function () {
+    var text = $(this).text().trim();
+    var html = '';
+    for (var i = 0; i < text.length; i++) {
+      var c = text.charAt(i);
+      if (c === '.') {
+        html = html + '<span class="flip-comma">.</span>';
+      } else {
+        html = html + '<span class="flip-digit">' + c + '</span>';
+      }
+    }
+    $(this).html(html);
+    $('.flip-digit').append('<span class="flip-stripe"></span>');
+  })
+
+}
 
 function initPopPage() {
   $('.popBtn').click(function (e) {
@@ -133,7 +154,7 @@ function initQA() {
     ChungTool.lockScroll();
   })
 
-  
+
 
   qa.find('.qBox').click(function (e) {
     $(this).closest('.qaBox').toggleClass('open')
