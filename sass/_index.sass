@@ -933,105 +933,105 @@ h2
 							vertical-align: text-top
 							margin-top: 2px
 
+.stepContainer
+	.pageTitle
+		+fb 
+		text-align: center
+	.stepWrap
+		display: flex
+		margin-top: 30px
+		.stepBox
+			background-color: #e9e9e9		
+			padding-top: 40px
+			width: 34%
+			text-align: center
+			position: relative
+			height: 250px
+			&:after 
+				pointer-events: none
+				left: 100%
+				top: 50%
+				border: solid transparent
+				content: " "
+				height: 0
+				width: 0
+				position: absolute
+				pointer-events: none
+				border-color: rgba(136, 183, 213, 0)
+				border-left-color: #e9e9e9	
+				border-width: 125px
+				margin-top: -125px
+				z-index: 2
+				+scaleX(.3)
+				+transform-origin(0,0)
+			&:last-child:after 
+				display: none
+			&:nth-child(2n)
+				background-color: #f6f4f4
+				&:after 
+					border-left-color: #f6f4f4
+			// .pic 
+			// 	margin: 0 auto
+			// 	&.p1
+			// 		+bg('step1.png')
+			// 	&.p2 
+			// 		+bg('step2.png') 
+			// 	&.p3
+			// 		+bg('step3.png') 
+			.stepDate
+				.stepTxt
+					+fm
+					letter-spacing: auto
+					.numTxt
+						+fb
+						// vertical-align: text-bottom
+			.dateTxt
+				+fss
+				margin-top: -5px
+				
+			h1  
+				+fm
+				margin-top: 15px
+			h2 
+				+fss
+		
+		+pad2
+			flex-wrap: wrap
+			width: 550px
+			margin-left: auto
+			margin-right: auto
+			
+			.stepBox 
+				width: 100%
+				height: auto
+				padding: 90px 20px 0 
+				&:after 
+					left: 50%
+					top: 100%
+					border: solid transparent
+					position: absolute
+					pointer-events: none
+					border-color: rgba(136, 183, 213, 0)
+					border-top-color: #e9e9e9	
+					border-width: 275px
+					margin-top: 0
+					margin-left: -275px
+					z-index: 2
+					+scaleX(1)
+					+scaleY(.15)
+					+transform-origin(0,0)
+				&:last-child
+					padding-bottom: 50px
+				&:first-child
+					padding-top: 50px
+				&:nth-child(2n)
+					&:after 
+						border-left-color: transparent
+						border-top-color: #f6f4f4 
 
+		
 #chart
 	.gridContainer
-		.stepContainer
-			.pageTitle
-				+fb 
-				text-align: center
-			.stepWrap
-				display: flex
-				margin-top: 30px
-				.stepBox
-					background-color: #e9e9e9		
-					padding-top: 40px
-					width: 34%
-					text-align: center
-					position: relative
-					height: 250px
-					&:after 
-						pointer-events: none
-						left: 100%
-						top: 50%
-						border: solid transparent
-						content: " "
-						height: 0
-						width: 0
-						position: absolute
-						pointer-events: none
-						border-color: rgba(136, 183, 213, 0)
-						border-left-color: #e9e9e9	
-						border-width: 125px
-						margin-top: -125px
-						z-index: 2
-						+scaleX(.3)
-						+transform-origin(0,0)
-					&:last-child:after 
-						display: none
-					&:nth-child(2n)
-						background-color: #f6f4f4
-						&:after 
-							border-left-color: #f6f4f4
-					// .pic 
-					// 	margin: 0 auto
-					// 	&.p1
-					// 		+bg('step1.png')
-					// 	&.p2 
-					// 		+bg('step2.png') 
-					// 	&.p3
-					// 		+bg('step3.png') 
-					.stepDate
-						.stepTxt
-							+fm
-							letter-spacing: auto
-							.numTxt
-								+fb
-								// vertical-align: text-bottom
-					.dateTxt
-						+fss
-						margin-top: -5px
-						
-					h1  
-						+fm
-						margin-top: 15px
-					h2 
-						+fss
-				
-				+pad2
-					flex-wrap: wrap
-					width: 550px
-					margin-left: auto
-					margin-right: auto
-					
-					.stepBox 
-						width: 100%
-						height: auto
-						padding: 90px 20px 0 
-						&:after 
-							left: 50%
-							top: 100%
-							border: solid transparent
-							position: absolute
-							pointer-events: none
-							border-color: rgba(136, 183, 213, 0)
-							border-top-color: #e9e9e9	
-							border-width: 275px
-							margin-top: 0
-							margin-left: -275px
-							z-index: 2
-							+scaleX(1)
-							+scaleY(.15)
-							+transform-origin(0,0)
-						&:last-child
-							padding-bottom: 50px
-						&:first-child
-							padding-top: 50px
-						&:nth-child(2n)
-							&:after 
-								border-left-color: transparent
-								border-top-color: #f6f4f4 
-
 		.chartContainer
 			display: flex
 			flex-wrap: wrap

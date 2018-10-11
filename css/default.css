@@ -4452,15 +4452,15 @@ h2 {
   margin-top: 2px;
 }
 
-#chart .gridContainer .stepContainer .pageTitle {
+.stepContainer .pageTitle {
   font-size: 3rem;
   text-align: center;
 }
-#chart .gridContainer .stepContainer .stepWrap {
+.stepContainer .stepWrap {
   display: flex;
   margin-top: 30px;
 }
-#chart .gridContainer .stepContainer .stepWrap .stepBox {
+.stepContainer .stepWrap .stepBox {
   background-color: #e9e9e9;
   padding-top: 40px;
   width: 34%;
@@ -4468,7 +4468,7 @@ h2 {
   position: relative;
   height: 250px;
 }
-#chart .gridContainer .stepContainer .stepWrap .stepBox:after {
+.stepContainer .stepWrap .stepBox:after {
   pointer-events: none;
   left: 100%;
   top: 50%;
@@ -4492,56 +4492,56 @@ h2 {
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
 }
-#chart .gridContainer .stepContainer .stepWrap .stepBox:last-child:after {
+.stepContainer .stepWrap .stepBox:last-child:after {
   display: none;
 }
-#chart .gridContainer .stepContainer .stepWrap .stepBox:nth-child(2n) {
+.stepContainer .stepWrap .stepBox:nth-child(2n) {
   background-color: #f6f4f4;
 }
-#chart .gridContainer .stepContainer .stepWrap .stepBox:nth-child(2n):after {
+.stepContainer .stepWrap .stepBox:nth-child(2n):after {
   border-left-color: #f6f4f4;
 }
-#chart .gridContainer .stepContainer .stepWrap .stepBox .stepDate .stepTxt {
+.stepContainer .stepWrap .stepBox .stepDate .stepTxt {
   font-size: 2.2rem;
   letter-spacing: auto;
 }
-#chart .gridContainer .stepContainer .stepWrap .stepBox .stepDate .stepTxt .numTxt {
+.stepContainer .stepWrap .stepBox .stepDate .stepTxt .numTxt {
   font-size: 3rem;
 }
-#chart .gridContainer .stepContainer .stepWrap .stepBox .dateTxt {
+.stepContainer .stepWrap .stepBox .dateTxt {
   font-size: 1.2rem;
   margin-top: -5px;
 }
 @media screen and (max-width: 768px) {
-  #chart .gridContainer .stepContainer .stepWrap .stepBox .dateTxt {
+  .stepContainer .stepWrap .stepBox .dateTxt {
     font-size: 1.6rem;
   }
 }
-#chart .gridContainer .stepContainer .stepWrap .stepBox h1 {
+.stepContainer .stepWrap .stepBox h1 {
   font-size: 2.2rem;
   margin-top: 15px;
 }
-#chart .gridContainer .stepContainer .stepWrap .stepBox h2 {
+.stepContainer .stepWrap .stepBox h2 {
   font-size: 1.2rem;
 }
 @media screen and (max-width: 768px) {
-  #chart .gridContainer .stepContainer .stepWrap .stepBox h2 {
+  .stepContainer .stepWrap .stepBox h2 {
     font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 1199px) {
-  #chart .gridContainer .stepContainer .stepWrap {
+  .stepContainer .stepWrap {
     flex-wrap: wrap;
     width: 550px;
     margin-left: auto;
     margin-right: auto;
   }
-  #chart .gridContainer .stepContainer .stepWrap .stepBox {
+  .stepContainer .stepWrap .stepBox {
     width: 100%;
     height: auto;
     padding: 90px 20px 0;
   }
-  #chart .gridContainer .stepContainer .stepWrap .stepBox:after {
+  .stepContainer .stepWrap .stepBox:after {
     left: 50%;
     top: 100%;
     border: solid transparent;
@@ -4566,17 +4566,18 @@ h2 {
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
   }
-  #chart .gridContainer .stepContainer .stepWrap .stepBox:last-child {
+  .stepContainer .stepWrap .stepBox:last-child {
     padding-bottom: 50px;
   }
-  #chart .gridContainer .stepContainer .stepWrap .stepBox:first-child {
+  .stepContainer .stepWrap .stepBox:first-child {
     padding-top: 50px;
   }
-  #chart .gridContainer .stepContainer .stepWrap .stepBox:nth-child(2n):after {
+  .stepContainer .stepWrap .stepBox:nth-child(2n):after {
     border-left-color: transparent;
     border-top-color: #f6f4f4;
   }
 }
+
 #chart .gridContainer .chartContainer {
   display: flex;
   flex-wrap: wrap;
