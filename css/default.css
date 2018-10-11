@@ -3188,6 +3188,11 @@ a:hover {
   height: 140px;
   background-image: url("../images/icon/dot5.png");
 }
+.icon.feature6 {
+  width: 120px;
+  height: 140px;
+  background-image: url("../images/icon/dot6.png");
+}
 .icon.linkedin {
   width: 26px;
   height: 26px;
@@ -3979,7 +3984,7 @@ h2 {
   z-index: 2;
 }
 #feature .gridContainer .featureWrap .featureBox {
-  width: 19%;
+  width: 30%;
   margin-bottom: 15px;
 }
 #feature .gridContainer .featureWrap .featureBox .icon {
