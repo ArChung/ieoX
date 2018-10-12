@@ -4578,6 +4578,42 @@ h2 {
   }
 }
 
+#chart03 {
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 340px !important;
+  height: 340px !important;
+}
+#chart03 .ct-series-e {
+  display: none;
+}
+#chart03 .ct-label {
+  font-size: 1.2rem;
+  fill: white;
+}
+#chart03 .ct-series-a .ct-slice-pie {
+  fill: #cfcfcf;
+}
+#chart03 .ct-series-b .ct-slice-pie {
+  fill: #b9b9b9;
+}
+#chart03 .ct-series-c .ct-slice-pie {
+  fill: #cfcfcf;
+}
+#chart03 .ct-series-d .ct-slice-pie {
+  fill: #b9b9b9;
+}
+
+#chart01 {
+  position: relative;
+  z-index: 2;
+}
+
 #chart .gridContainer .chartContainer {
   display: flex;
   flex-wrap: wrap;

@@ -270,8 +270,22 @@ function initChart() {
 
 
   TweenMax.set('.chatDataWrap .chartData',{autoAlpha:0})
-  
+  TweenMax.set('.chat01_sub',{autoAlpha:0})
+
+  var chart3 = new Chartist.Pie('#chart03', {
+    series: [20,19,8,8,45],
+  }, {
+    labelInterpolationFnc: function(value) {
+      if(value=='45'){
+        return ''
+      }
+      return value + '%';
+    },
+  });
+
+
   inView('#chart01').once('enter',function(){
+    TweenMax.to('.chat01_sub',.8,{autoAlpha:1,delay:3})
     var chart = new Chartist.Pie('#chart01', {
       series: data1,
     }, {
