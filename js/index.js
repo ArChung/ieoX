@@ -286,6 +286,20 @@ function initChart() {
 
   inView('#chart01').once('enter',function(){
     TweenMax.to('.chat01_sub',.8,{autoAlpha:1,delay:3})
+
+    var tl = new TimelineMax();
+
+    tl.set('ul.chat01_sub li',{autoAlpha:0})
+    .set('#chart03 .ct-series',{autoAlpha:0})
+    .set('#chart03 .ct-label',{autoAlpha:0})
+    .set('.chat01_sub',{autoAlpha:1},3)
+    .staggerTo('ul.chat01_sub li',.6,{autoAlpha:1},.6,'show')
+    .staggerTo('#chart03 .ct-series',.6,{autoAlpha:1},.6,'show')
+    .staggerTo('#chart03 .ct-label',.6,{autoAlpha:1},.6,'show')
+    
+
+
+
     var chart = new Chartist.Pie('#chart01', {
       series: data1,
     }, {
