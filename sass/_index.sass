@@ -53,6 +53,8 @@ h2
 	background-color: #858484
 	@include filter-gradient(#858484, #616161, horizontal)
 	@include background-image(linear-gradient(left, #858484 32%,#616161 65%))
+
+
 .selectWrap
 	position: relative
 	display: block
@@ -302,6 +304,19 @@ h2
 	+ .gridContainer
 		z-index: 1
 		position: relative
+
++keyframes('rocket')
+	0% 
+		top: 30px
+	50%
+		top: 10px
+	100%
+		top: 30px
++keyframes('rocketBg')
+	0% 
+		background-position: 0% 0%
+	100%
+		background-position: 0% 166px
 #index 
 	min-height: 100%
 	+coverBg
@@ -346,7 +361,21 @@ h2
 					width: 100%
 					&:not(:last-child)
 						margin-right: 0
+		.barBox
+			width: calc(100% - 100px)
 			
+		.rocketBox
+			width: 100px
+			+bgi('rocket_bg.png')
+			+animation(rocketBg 1s infinite linear)
+			
+			
+			.rocket
+				+bg('rocket.png')
+				margin: 0 auto
+				position: relative
+				top: 30px
+				+animation(rocket 1s infinite ease-in-out)
 #score
 	.gridContainer
 		padding: 60px 50px

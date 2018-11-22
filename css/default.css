@@ -3615,6 +3615,63 @@ h2 {
   position: relative;
 }
 
+@-moz-keyframes rocket {
+  0% {
+    top: 30px;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 30px;
+  }
+}
+@-webkit-keyframes rocket {
+  0% {
+    top: 30px;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 30px;
+  }
+}
+@keyframes rocket {
+  0% {
+    top: 30px;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 30px;
+  }
+}
+@-moz-keyframes rocketBg {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 166px;
+  }
+}
+@-webkit-keyframes rocketBg {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 166px;
+  }
+}
+@keyframes rocketBg {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 166px;
+  }
+}
 #index {
   min-height: 100%;
   -moz-background-size: cover;
@@ -3699,6 +3756,27 @@ h2 {
   #index .gridContainer .btnWrap .borderBtn:not(:last-child) {
     margin-right: 0;
   }
+}
+#index .gridContainer .barBox {
+  width: calc(100% - 100px);
+}
+#index .gridContainer .rocketBox {
+  width: 100px;
+  background-image: url("../images/rocket_bg.png");
+  -moz-animation: rocketBg 1s infinite linear;
+  -webkit-animation: rocketBg 1s infinite linear;
+  animation: rocketBg 1s infinite linear;
+}
+#index .gridContainer .rocketBox .rocket {
+  width: 61px;
+  height: 119px;
+  background-image: url("../images/rocket.png");
+  margin: 0 auto;
+  position: relative;
+  top: 30px;
+  -moz-animation: rocket 1s infinite ease-in-out;
+  -webkit-animation: rocket 1s infinite ease-in-out;
+  animation: rocket 1s infinite ease-in-out;
 }
 
 #score .gridContainer {
